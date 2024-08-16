@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores personalizados</title>
+    <link rel="stylesheet" href="seletores.css">
+</head>
+<body>
+    <h1 id="principal">Criando Sites com HTML e CSS</h1>
+    <h1>Aprendendo HTML</h1>
+    <h2 class="basico">HTML básico</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, autem ab vitae minus excepturi asperiores, ipsum ipsam laborum necessitatibus veritatis officiis perferendis exercitationem eius quo id maiores assumenda deserunt. Quibusdam!</p>
+    <h2 class="intermediario">HTML intermediário</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum perspiciatis, qui tempora assumenda, adipisci dolorum, magni laudantium ipsam cupiditate explicabo aperiam ipsa atque magnam harum fugit saepe. Numquam, fugiat ipsam?</p>
+    <h2 class="avancado">HTML avançado</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi commodi eligendi quos voluptatem dolores voluptates, nesciunt dolorum ipsam inventore ab earum dicta quod non, consectetur iure voluptate, rem a voluptatum.</p>
+    <h1>Aprendendo CSS</h1>
+    <h2 class="basico">CSS básico</h2>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus iste neque fuga. Animi cum voluptate, unde ullam placeat excepturi fuga eaque veniam magnam? Natus laudantium veritatis doloremque nemo quibusdam rem?
+    <h2 class="intermediario">CSS intermediário</h2>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, quasi natus alias vero officiis ipsum cum consequatur placeat perferendis nobis. Libero nemo unde accusantium a quisquam consectetur corrupti. Eum, fuga?
+    <h2 class="avancado">CSS avançado</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim nobis expedita consequatur soluta magni, aspernatur itaque. Aperiam, quas tenetur laudantium labore deleniti qui optio aliquam possimus fugit! Saepe, quod ratione?</p>
+    <br>
+    <br>
+    <hr>
+    <p>Para usar os seletores, é necessário dar uma indentificação para a tag que deseja modificar unicamente, no CSS externo que estou usando fica da seguinte maneira:</p>
+    <img width="500" src="../midia/id.png" alt="Id com CSS3">
+    <p>Como pode ser visto, uma das tags h1, está com a id="principal", p que significa que esse h1 tem a indentificação diferente dos outros h1, então nas CSS deve ser colocado principal{}, e não h1 como normalmente é feito. <br><strong><small>Estou falando da tag h1 nesse caso mas o id pode ser usado em qualquer tag.</small></strong></p>
+    <p>No CSS externo fica da seguinte maneira:</p>
+    <img width="500" src="../midia/principal.png" alt="Id em CSS">
+    <p>As mudanças inseridas no h1#principal, serão feitas apenas nele.</p>
+    <hr>
+    <h3 style="text-align: center;">Usando Class</h3>
+    <p>O class serve como um container, que guarda mais de um item dentro dele e modifica apenas esses itens "armazenados", o class é identificado por meio de um ponto, da seguinte forma:</p>
+    <img width="500" src="../midia/classes.png" alt="Usando class em CSS">
+    <p>Como pode ser visto, os h2 do código estão com a class="" definida, essas class serão inserida nas CSS e em seguida será feita as declarações com os parâmetros desejados para que elas se adaptem como você quiser, as tags inseridas nas class serão as únicas a serem mudadas caso um .class seja inseridos no CSS, da seguinte forma:</p>
+    <img width="500" src="../midia/cssclass.png" alt="Class inserido em CSS externo">
+    <p>Também é possível inserir mais de uma class em uma tag. E também é possível inserir um id em uma class.</p>
+    <a href="../index.html">Voltar à página inicial</a>
+</body>
+</html>

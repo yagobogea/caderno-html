@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site responsivo</title>
+    <style>
+        body {
+            background-color: rgb(250, 204, 250);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header > div > h1:hover {
+            background-color: cornflowerblue;
+            margin-right: 672px;
+            border-radius: 4px 4px 4px 4px;
+        }
+
+        main {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+
+            min-width: 280px; /*largura da tela de celulares antigos quando em pé*/
+            max-width: 800px;
+            margin: auto; /*alinha o conteúdo ao centro*/
+        }
+
+        footer {
+            text-align: center;
+            padding-top: 9px;
+        }
+
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Site responsivo</h1>
+        </div>
+        <br>
+        <p>
+            Com padding e margin zerados, um site com a tela muito pequena fica distorcido e com as imagens vazando, assim como em uma tela grande, as imagens ficam fora de centralização e não se adaptam.
+        </p>
+        <p>
+            Um site com margin e padding zerados, tem uma responsividade boa, porém não se adapta tão devidamente ao tamanho das telas.
+        </p>
+        <hr>
+    </header>
+    <main>
+        <article>
+            <p>
+                Com essa forma que irei ensinar, é necessário delimitar um tamanho mínimo e um tamanho máximo. Dessa forma, o site se comportará de certo modo ao atingir o menor tamanho, e de outro modo ao atingir o maior tamanho.
+            </p>
+            <picture>
+                <source media="(max-width: 800px)" srcset="../midia/irina-blok-pq.jpg">
+                <img src="../midia/irina-blok.jpg" alt="Irina Blok">
+            </picture>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis mollitia nesciunt, pariatur recusandae fugiat illo deserunt omnis vero possimus soluta id quis, laborum sunt a sint dolore. Rem, magni expedita. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt accusantium minus velit quasi laboriosam nobis impedit assumenda ea in aperiam cumque odio eos, iste illum repellat voluptates, veniam sapiente quaerat! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis saepe eligendi adipisci ipsum quam doloribus quisquam deleniti consequatur. Soluta in dicta odit culpa eius quibusdam molestiae magni, non est laboriosam.
+            </p>
+            <p>
+                Se nada for feito, o arquivo já é um pouco responsivo, ele se adapta um pouco à tela, pois já há o modelo de blocos, e os blocos por padrão ocupam 100% da tela. Porém isso só serve para os textos, com imagens a coisa é diferente, ela tem o seu próprio tamanho então não se adapta de acordo com a tela, logo, é necessário fazer da seguinte formam usando CSS, para que o site inteiro seja adaptável:
+            </p>
+            <pre>
+main {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+
+    min-width: 320px; //tamanho mínimo da tela 
+    max-width: 800px; //tamanho máximo da tela
+    margin: auto; //alinha o conteúdo ao centro 
+}
+            </pre>
+            <p>
+                Dessa forma todos os textos dentro da div &lt;main&gt; ficam adaptáveis ao site, porém as imagens não, para ajeitar as imagens, faz-se da seguinte forma:
+            </p>
+            <p>
+                O modo mais simples é apenas definir a largura da imagem em 100%, o que significa que a imagem terá o seu tamanho completo independente do tamanho do site, fará com que a imagem não fique quebrando.
+            </p>
+            <pre>
+img {
+    width: 100%;
+}
+            </pre>
+            <p>
+                Outra coisa que fiz foi aquele esquema em que ao chegar em certo tamanho a imagem muda para uma menor e melhor adaptável que já foi explicado antes e usa &lt;picture&gt; e os sources. E como o padrão para img já foi definido em CSS para 100%, essa imagem também se adapta ao site caso ele seja diminuído ainda mais.
+            </p>
+            <pre>
+&lt;picture&gt;
+    &lt;source media="(max-width: 800px)" srcset="../midia/irina-blok-pq.jpg"&gt;
+    &lt;img src="../midia/irina-blok.jpg" alt="Irina Blok"&gt;
+&lt;/picture&gt;
+            </pre>
+        </article>
+        <aside>
+            <a href="../index.html">Voltar</a>
+        </aside>
+    </main>
+    <footer>
+        Feito por Yago Bogéa
+    </footer>
+</body>
+</html>

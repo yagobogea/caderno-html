@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Caixas</title>
+</head>
+<style>
+    body {
+        background-color: rgb(244, 198, 255);
+    }
+
+    h1 {
+        background-color: lightslategray;
+
+        height: 300px;
+        width: 300px;
+
+        border: 10px solid darkslategray;
+
+        padding: 10px /*10px 10px 10px |como todas são iguais não é necessário informar a configuração de cada uma, caso fossem diferentes precisaria de uma declaração de pixels para cada, também há como colocar apenas duas declarações, fazendo com que a primeira configuração se aplique ao topo e embaixo e a segunda a direita e a esquerda*/;                
+
+        margin: 20px 20px 40px 20px /*caso eu queira centralizar com shorthand, devo colocar 20px (configuração do top), auto (configuração da direita), 40px (configuração do bottom), auto (configuração da esquerda)*/;
+
+        outline: 5px dashed salmon;
+    }
+
+    .link {
+        border-width: 10px;
+        border-style: solid;
+        border-color: red;
+        padding-top: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+    }
+</style>
+<body>
+    <h1>Exemplo de caixa box-level</h1>
+    <p>Parágrafos também são exemplos de box-level, mas os <a href="#" class="link"> links são exemplos de caixas inline-level</a>. Vou mostrar como tudo isso funciona.</p>
+    <p>Assim fica uma configuração de box nas CSS:</p>
+    <img width="500" src="../midia/boxcss.png" alt="">
+    <p>Os parâmetros inserido são: height para altura, width para largura, border-width para definir a largura da borda, border-style para definir o tipo de borda, border-color para definir a cor da borda, padding-top para definir a distância do padding do topo e os outros paddings tem a mesma função só que para cada lado. As configurações de padding devem ser postas em um sentido horário, primeiro top, depois right, depois bottom e por fim left.</p>
+    <p>Existe também uma outra medida que é a margem (margin), a margin também é configurada como o padding, no sentido do relógio, a margin serve para criar um espaço externo entre uma caixa e outra.</p>
+    <img width="500" src="../midia/margin.png" alt="Configurando Margin com CSS">
+    <br> <br>
+    <h3>Centralizando caixas com CSS</h3>
+    <p>Para centralizar caixas usando margin, basta escrever margin: auto; que automaticamente a caixa será centralizada na tela.</p>
+    <p>Outra coisa que também pode ser feita, é criar o outline. Outline fica entre a borda e a margem, porém dentro da margin. Para configurá-la faz-se dessa maneira:</p>
+    <img width="500" src="../midia/outline.png" alt="Configurando Outline com CSS">
+    <p>Essas configurações fizeram aparecer esse tracejado em volta da caixa.</p>
+    <h3>Simplificando essas configurações</h3>
+    <p>Para fazer essa simplificação utiliza-se shorthands, que já vimos anteriorimente, as declarações simplificadas ficam da seguinte forma:</p>
+    <pre>
+        h1 {
+            background-color: lightslategray;
+    
+            height: 300px;
+            width: 300px;
+    
+            border: 10px solid darkslategray;
+    
+            padding: 10px /*10px 10px 10px |como todas são iguais não é necessário informar a configuração de cada uma, caso fossem diferentes precisaria de uma declaração de pixels para cada, também há como colocar apenas duas declarações,<br>            fazendo com que a primeira configuração se aplique ao topo e embaixo e a segunda a direita e a esquerda*/;                
+    
+            margin: 20px 20px 40px 20px /*caso eu queira centralizar com shorthand, devo colocar 20px (configuração do top), auto (configuração da direita), 40px (configuração do bottom), auto (configuração da esquerda)*/;
+    
+            outline: 5px dashed salmon;
+        }
+
+        
+        <strong><small>NECESSARIAMENTE NESSAS ORDENS</small></strong>
+    </pre>
+    <br> <br> <br>
+    <a href="../index.html">Voltar à página inicial</a>
+</body>
+</html>

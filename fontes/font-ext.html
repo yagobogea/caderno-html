@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes Externas</title>
+    <style>
+        @font-face {
+            font-family: 'Varsity';
+            src: url('../olds/varsity_regular.ttf') format('truetype');
+            font-weight: lighter;
+            font-style: normal;
+        }
+
+        body{
+            font-family: 'Arial', Helvetica, sans-serif;
+        }
+
+        h1{
+            font-family: 'Varsity', Times, serif;
+            font-size: 3em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fontes externas baixadas</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, odit porro dignissimos, accusantium suscipit at voluptates, aliquam commodi velit facere quisquam. Quos reprehenderit voluptatem voluptate rem architecto voluptas ab ut.</p>
+    <p>Para utilizar fontes externas, necessita-se de ter o arquivo baixado no seu computador, o arquivo pode ser baixado de vários sites, um exemplo é o DaFont, ao ter o arquivo baixado o insira na pasta que contem o seu index. Para inserir a fonte nos textos, precisa-se criar um Font-Face personalizado dentro do CSS, como aqueles que usam o @ visto na aula passada, </p>
+    <small>
+        <p>OBS: os arquivos serão salvos ou ttf ou otf, depende do navegador para usá-los. Indica-se colocar os dois para que se um não funcione, o outro funcione. Ao se inserir o arquivo nas CSS, deve-se colocar um format(); que podem ser:
+        <ul>
+            <li>opentype (normalmente usado para otf)</li>
+            <li>truetype (normalmente usado para ttf)</li>
+            <li>embedded-opentype</li>
+            <li>truetype-aat (Apple Advanced Typography)</li>
+            <li>svg</li>
+        </ul>
+    </p>
+    </small>
+    <a href="../index.html">Voltar à página inicial</a>
+</body>
+</html>

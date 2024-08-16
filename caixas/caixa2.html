@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping tags</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: dimgray;
+            margin: 0px;
+        }
+
+        header {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 3px;
+        }
+
+        nav {
+            background-color: rgb(138, 135, 135);
+            padding: 3px;
+            box-shadow: 3px /* deslocamento horizontal */ 3px /* deslocamento vertical */ 5px /* desfoque */ 3px /* espalhamento */ rgba(0, 0, 0, 0.315); /* cor da sombra */
+            border-radius: 3px;
+        }
+
+        nav > a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+
+        nav > a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 3px;
+        }
+
+        article {
+            background-color: lightgray;
+            padding: 5px;
+            border-radius: 3px;
+        }
+
+        article > aside {
+            background-color: rgb(175, 173, 173);
+            border-radius: 3px;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin: 0px;
+        }
+
+        footer > p {
+            margin: 0px;
+        }
+
+        .pre2 {
+            background-color: white;
+            margin-right: 465px;
+            margin-left: 20px;
+            box-shadow: 5px 5px 4px 3px rgba(0, 0, 0, 0.315);
+            border-radius: 4px;
+        }
+
+        div#bola {
+            height: 100px;
+            width: 100px;
+            background-color: white;
+            margin: 10px;
+            border-radius: 50%;
+        }
+
+        div#bola:hover {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu site</h1>
+        <nav>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </header>
+    <main>
+        <section id="assuntos">
+            <article>
+                <h2>Notícia sobre o Brasil</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi eius nisi architecto placeat earum culpa, praesentium ullam ea doloribus nam? Perferendis cum aliquam libero explicabo quam, temporibus soluta reiciendis voluptas?</p>
+                <aside>
+                    <p>Artigo escrito por mim</p>
+                </aside>
+            </article>
+            <article>
+
+            </article>
+        </section>
+        <section id="noticias">
+            
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por Yago Bogéa</p>
+    </footer>
+    <p><strong><small>Cada uma dessas tags funciona como uma div, porém são "divs semânticas".</small></strong></p>
+    <pre class="pre1">
+    <h3>Usando grouping tags em HTML5:</h3>
+&lt;header&gt; //cabeçalho
+    &lt;h1&gt;Meu site&lt;/h1&gt;
+    &lt;nav&gt; //área de navegação
+        &lt;a href="#"&gt;Link&lt;/a&gt;
+        &lt;a href="#"&gt;Link&lt;/a&gt;
+        &lt;a href="#"&gt;Link&lt;/a&gt;
+        &lt;a href="#"&gt;Link&lt;/a&gt;
+        &lt;a href="#"&gt;Link&lt;/a&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+&lt;main&gt; //conteúdo principal do site
+    &lt;section id="assuntos"&gt; //sessão dentro desse conteúdo
+        &lt;article&gt; //artigo dentro dessa sessão
+            &lt;h2&gt;Notícia sobre o Brasil&lt;/h2&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi eius nisi architecto placeat earum culpa, praesentium ullam ea doloribus nam? Perferendis cum aliquam libero explicabo quam, temporibus soluta reiciendis voluptas?&lt;/p&gt;
+            &lt;aside&gt; //texto escrito ao lado
+                &lt;p&gt;Artigo escrito por mim&lt;/p&gt;
+            &lt;/aside&gt;
+        &lt;/article&gt;
+        &lt;article&gt;
+
+        &lt;/article&gt;
+    &lt;/section&gt;
+    &lt;section id="noticias"&gt;
+        
+    &lt;/section&gt;
+&lt;/main&gt;
+&lt;footer&gt; //rodapé do site
+    &lt;p&gt;Desenvolvido por Yago Bogéa&lt;/p&gt;
+&lt;/footer&gt;
+    </pre>
+    <h3>Configuração em CSS:</h3>
+    <pre class="pre2">
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: dimgray;
+    margin: 0px;
+}
+
+header {
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+}
+
+nav {
+    background-color: rgb(138, 135, 135);
+    padding: 3px;
+}
+
+nav > a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+nav > a:hover {
+    text-decoration: underline;
+}
+
+main {
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+}
+
+article {
+    background-color: lightgray;
+    padding: 5px;
+}
+
+article > aside {
+    background-color: rgb(175, 173, 173);
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin: 0px;
+}
+    </pre>
+    <p>A configuração dessa caixa está assim:</p>
+    <pre>
+.pre2 {
+    background-color: white;
+    margin-right: 465px;
+    margin-left: 20px;
+    box-shadow: 5px 5px 4px 3px rgba(0, 0, 0, 0.315);
+    border-radius: 5px;
+}
+    </pre>
+
+    <p>Fazendo uma bolinha com border-radius:</p>
+    <div id="bola"></div>
+    <p>Fiz as seguintes configurações com CSS:</p>
+    <pre>
+div#bola {
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+    </pre>
+    <a href="../index.html">Voltar</a>
+</body>
+</html>

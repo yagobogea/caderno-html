@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="naruto.ico" type="image/x-icon">
+    <title>Meu html</title>
+    <style>
+        mark
+        {
+            background-color: green;
+        }
+
+        body
+        {
+            background-color: rgb(255, 212, 255);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h2{
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .ifr {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Meu caderno para HTML5 e CSS3
+    </h1>
+    <hr>
+    <h2>
+        Começando por:
+    </h2>
+    <h1>
+        Títulos (esse é o h1)
+    </h1>
+    <h2 style="text-align: left;">
+        Esse é o h2
+    </h2>
+    <h3>
+        Esse é o h3
+    </h3>
+    <p>E por ai vai até o h6</p>
+    <br>
+    <p>
+        Parágrafos usando a tag &lt;p&gt;
+    </p>
+    <br>
+    <p>
+        Quebras de <br>linha usando a tag &lt;br&gt;
+    </p>
+    <br>
+    <p>
+        Símbolos
+    </p>
+    &copy;
+    &lt; &gt;
+    &uarr;
+    &darr;
+    &euro;
+    &dollar;
+    <p>
+        Esses símbolos são feitos através do comando & e em seguida o seu nome. Ex: &+copy (para fazer o símbolo de copyright).
+    </p>
+    <br>
+    <p>
+        Emojis
+    </p>
+    &#x1F44D;
+    &#x261D;
+    <p>
+        para adicionar emojis se coloca a tag &#x e em seguida o código do emoji.
+    </p>
+    <br>
+    <p>
+        Imagens usando &lt;img src="imagem.jpeg/jpg/png/URL da imagem" alt="Texto breve explicando do que se trata a imagem"&gt; <br>Também há como escolher o tamanho da imagem usando o parâmetro width="tamanho desejado"
+    </p>
+    <img src="minat.jpeg" alt="Imagem de Minato Namikaze do anime Naruto">
+    <br>
+    <p>
+        Favicons colocando a tag &lt;link rel="shortcut icon" href="favicon.ico" type="image/x-icon"&gt; acima da linha onde fica a tag &lt;title&gt;&lt;/title&gt;
+    </p>
+    <p>
+        Favicons são a pequena imagem que fica na aba de um site, como esse do naruto que eu pus.
+    </p>
+    <h2>
+        Formatações de Texto
+    </h2>
+    <p>Temos <strong>negrito</strong> usando a tag &lt;strong&gt;</p>
+    <p>Temos <em>itálico</em> usando a tag &lt;em&gt;</p>
+    <p>Tabém é possível utilizar as tags &lt;b&gt; para ter o mesmo efeito do <b>negrito</b> e a tag &lt;i&gt; <i> para ter o mesmo efeito do itálico</i> porém, com a criação relativamente recente das tags anteriormente citadas essas antigas tendem a ficar obsoletas por serem do HTML4, e também, não são tags semânticas, apenas mudam a forma e não o significado de um texto.</p>
+    <h2>Texto marcado / Marca-texto</h2>
+    <p>É possível inserir um <mark style="background-color: yellow;">texto marcado</mark> no código HTML5.</p>
+    <p>Também é possível selecionar a <mark style="background-color: orange;">cor da marcação</mark>, usando &lt;mark style="background-color: cor desejada;"&gt; </p>
+    <p>Também há como criar um padrão de cores para que todas as tags &lt;mark&gt; sejam da mesma cor. Para isso, é necessário usar CSS3, logo acima do &lt;head&gt;&lt;/head&gt;, deve ser colocado a tag &lt;style&gt; e selecionar para qual tag está designado tal style.</p>
+        <pre>
+            <code>
+Dessa forma: 
+
+&lt;style&gt;
+mark
+{
+    background-color: cor desejada;
+}
+&lt;/style&gt;
+            </code>
+        </pre>
+    <p>Dessa forma, todos os textos com a tag &lt;mark&gt; seguirão um padrão de cor. Teste <mark> de padrão de cor</mark> com a tag <mark>&lt;mark&gt;</mark>.<mark>Funciona&#x1F44D;.</mark></p>
+    <h2>Texto pequeno e texto grande</h2>
+    <p>Esses são exemplos de um <big>texto grande</big> e um <small>texto pequeno</small>.</p>
+    <p>Para fazê-los é necessário usar as tags &lt;big&gt; e &lt;small&gt;. Porém a tag &lt;big&gt; já se encontra obsoleta por não possuir sentido semântico, logo, quando necessário aumentar o tamanho de um texto, deve-se usar CSS3. Já a tag &lt;small&gt; pode ser usada livremente no código HTML5 pois possui sentido semãntico.</p>
+    <h2>Texto deletado e texto inserido</h2>
+    <p>É possível inserir um texto excluído/desconsiderado no <del>código HTML5</del>.</p>
+    <p>Para isso é necessário usar a tag &lt;del&gt;.</p>
+    <p><del>Teste Teste Teste</del></p>
+    <p>Também é possível colocar um <ins>texto inserido</ins>.</p>
+    <p>Para isso usa-se a tag &lt;ins&gt;.</p>
+    <p>Também há como utilizar o <u>sublinhado</u> utilizando a tag &lt;u&gt; que não possui diferença visual nenhuma para o inserido, porém não possui sentido semântico e logo deve se tornar obsoleta.</p>
+    <h2>Texto sobrescrito e texto subscrito</h2>
+    <p>Um texto sobrescrito é utilizado nesses casos: x<sup>3</sup>+4<sup>2</sup> = 10</p>
+    <p>Para fazê-lo é necessário utilizar a tag &lt;sup&gt; ao redor do texto/número que deseja sobrescrever.</p>
+    <p>Um texto subscrito é utilizado nesses casos: H<sub>2</sub>O, C<sub>2</sub>H<sub>6</sub>.</p>
+    <p>Para fazê-lo é necessário utilizar a tag &lt;sub&gt; ao redor do número ou texto que deseja subscrever.</p>
+    <h2>Mais formatações</h2>
+    <h3>Código-fonte / Pré-formatação</h3>
+    <p>Há fontes de textos que não são mono espaçadas e isso torna a leitura mais difícil, logo, para consertar isso, usa-se a tag &lt;code&gt;.</p>
+    <p>O comando document.getElementById('teste') é escrito em linguagem Javascript.</p>
+    <p>Texto sem &lt;code&gt;: document.getElementById('teste').</p>
+    <p>Há textos pré formatados, para fazer isso é necessário englobar todo o conteúdo escrito com a tag &lt;pre&gt;&lt;/pre&gt;.</p>
+    <pre>
+        <code>
+num = int(input('Digite um número'))
+if num %2 == 0:
+    print(f'O número {num} é PAR')
+else:
+    print(f'O número {num} é ÍMPAR')
+print('Fim do programa')
+
+(esse é um código em python).
+        </code>
+    </pre>
+    <h3>Citações simples e citações completas</h3>
+    <p>Há como enfatizar uma citação com a tag &lt;q&gt; (basicamente coloca aspas, mas como é uma tag é diferente das aspas, pois tem sentido semântico no código).</p>
+    <p><q>Como diria o pai de um amigo: o computador é um burro muito rápido.</q></p>
+    <p>Há também como fazer citações completas, através da tag &lt;blockquote&gt;.</p>
+    <p>Segundo meu avó</p>
+    <blockquote>Com calma e jeito, se chega ao cu de qualquer sujeito.</blockquote>
+    <h3>Abreviações</h3>
+    <p>Há como explicar o significado de abreviações, isso se dá através da tag &lt;abbr&gt;.</p>
+    <p>Esse é um código em <abbr title="Hypertext Markup Language">HTML</abbr>, logo irei aprender <abbr title="Cascading Style Sheets">CSS</abbr>. Bom <abbr title="Demais">dms</abbr>.</p>
+    <h3>Texto invertido</h3>
+    <p>Essa formatação é mais um meme e meio inútil, mas conhecimento nunca é demais. Para executá-la é necessário usar a tag &lt;bdo&gt;.</p>
+    <p><bdo dir="rtl">Esse é um site feito em código HTML5.</bdo></p>
+    <h2>Como mudar a cor de fundo</h2>
+    <p>Para mudar a cor de fundo de uma página é necessário utilizar CSS, deve-se colocar um &lt;style&gt; direcionado ao body, diretamente acima da tag &lt;head&gt;&lt;/head&gt;.</p>
+    <pre>
+        <code>
+Dessa forma:
+
+&lt;style&gt;
+    body
+    {
+        background-color: cor desejada;
+    }
+&lt;/style&gt;
+        </code>
+    </pre>
+    <h2>Listas</h2>
+    <h3>Listas Ordenadas</h3>
+    <p>Há como fazer vários tipos de listas ordenadas, utilizando a tag &lt;ol&gt; para delimitar a lista toda e &lt;li&gt; para delimitar cada item. Também há como aplicar um parâmetro type nas listas ordenadas, há como fazer listas numeradas utilizando o parâmetro type 1 (que já é o padrão automático), listas alfabéticas maiúsculas utilizando parâmetro type A, listas alfabéticas minúsculas utilizando o parâmetro type a, listas em algarismos romanos maiúsculos utilizando o parâmetro type I e listas em algarismos romanos minúsculos utilizando o parâmetro type i. Dentro do parâmetro type, há como selecionar em que letra/número a lista começará, usando o start. Dessa forma: &lt;ol type="1" start="4"&gt; para listas numeradas, por exemplo.</p>
+    <ol>
+        <li>Sair de casa</li>
+        <li>Ir para a academia</li>
+        <li>Treinar peito</li>
+        <li>Voltar para casa</li>
+        <li>Jantar</li>
+        <li>Dormir</li>
+    </ol>
+    <ol type="A">
+        <li>Sair de casa</li>
+        <li>Ir para a academia</li>
+        <li>Treinar peito</li>
+        <li>Voltar para casa</li>
+        <li>Jantar</li>
+        <li>Dormir</li>
+    </ol>
+    <ol type="a">
+        <li>Sair de casa</li>
+        <li>Ir para a academia</li>
+        <li>Treinar peito</li>
+        <li>Voltar para casa</li>
+        <li>Jantar</li>
+        <li>Dormir</li>
+    </ol>
+    <ol type="I">
+        <li>Sair de casa</li>
+        <li>Ir para a academia</li>
+        <li>Treinar peito</li>
+        <li>Voltar para casa</li>
+        <li>Jantar</li>
+        <li>Dormir</li>
+    </ol>
+    <ol type="i">
+        <li>Sair de casa</li>
+        <li>Ir para a academia</li>
+        <li>Treinar peito</li>
+        <li>Voltar para casa</li>
+        <li>Jantar</li>
+        <li>Dormir</li>
+    </ol>
+    <h3>Listas não ordenadas</h3>
+    <p>Há também as listas não ordenadas, também conhecidas como listas com marca, essas são as lista que possuem marcadores atrás, como bolinhas vazias (circle), bolinhas pretas (disc, que já é o padrão automático) e quadrados (square). Para criar uma lista não ordenada utiliza-se a tag &lt;ul&gt;, e para escolher o seu marcador, utiliza-se o parâmetro type. Dessa forma: &lt;ul type="circle"&gt; para fazer uma lista demarcada por bolinhas vazias por exemplo.</p>
+    <ul>
+        <li>Perfume</li>
+        <li>Camiseta</li>
+        <li>Chave do carro</li>
+        <li>Dinheiro</li>
+        <li>Celular</li>
+        <li>Mochila</li>
+    </ul>
+    <ul type="square">
+        <li>Perfume</li>
+        <li>Camiseta</li>
+        <li>Chave do carro</li>
+        <li>Dinheiro</li>
+        <li>Celular</li>
+        <li>Mochila</li>
+    </ul>
+    <ul type="circle">
+        <li>Perfume</li>
+        <li>Camiseta</li>
+        <li>Chave do carro</li>
+        <li>Dinheiro</li>
+        <li>Celular</li>
+        <li>Mochila</li>
+    </ul>
+    <h2>Misturando listas</h2>
+    <p>Há como criar sublistas dentro das listas principais, podendo ser ol's ou ul's, para que as listas principais se tornem um "tópico" superior as sublistas que seriam a sua "descrição". Dessa forma:
+    <pre>
+&lt;ol&gt;
+    &lt;li&gt;Antigas&lt;/li&gt; 
+    &lt;ul type="estilo de marcador desejado"&gt;
+        &lt;li&gt;C&lt;/li&gt; 
+        &lt;li&gt;C++&lt;/li&gt; 
+        &lt;li&gt;PHP&lt;/li&gt; 
+        &lt;li&gt;Java&lt;/li&gt; 
+    &lt;/ul&gt;
+    &lt;li&gt;Novas&lt;/li&gt; 
+    &lt;ul type="estilo de marcador desejado"&gt;
+        &lt;li&gt;Javascript&lt;/li&gt; 
+        &lt;li&gt;Python&lt;/li&gt; 
+        &lt;li&gt;C#&lt;/li&gt; 
+        &lt;li&gt;Ruby&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/ol&gt;
+    </pre>
+    <h3>Meus jogos favoritos</h3>
+    <ol>
+    <li>Xbox</li>
+        <ul>
+        <li>Ryse: Son of Rome</li>
+        <li>Halo</li>
+        </ul>
+    <li>PlayStation</li>
+        <ul>
+            <li>God of War</li>
+            <li>God of War: Ragnarok</li>
+            <li>The last of us</li>
+            <li>Spider-man</li>
+            <li>Spider-man 2</li>
+        </ul>
+    <li>PC</li>
+        <ul>
+            <li>League of Legends</li>
+            <li>Valorant</li>
+            <li>Fortnite</li>
+        </ul>
+    </ol>
+    <h2>Lista de Definições</h2>
+    <p>As listas de definição são parecidas com dicionários, que há um termo e sequencialmente há a sua definição, e para fazê-la usa-se a tag &lt;dl&gt; para englobar toda a lista, &lt;dt&gt; para englobar o termo a ser definido e &lt;dd&gt; para dar a definição desse termo.</p>
+    <dl>
+        <dt>Esports</dt>
+        <dd>Esportes eletrônicos</dd>
+        <dt>Filme</dt>
+        <dd>Conteúdo audiovisual</dd>
+    </dl>
+    <h2>Usando links externos</h2>
+    <p>Para usar um link externo (ou âncora) é necessário utilizar a tag &lt;a&gt; e colocar a URL desejada no campo href (referência de hipertexto). Dessa forma: &lt;a href="https://www.youtube.com/@CursoemVideo"&gt;</p>
+    <p><a href="https://www.netflix.com/browse">Acesse aqui</a> o link da Netflix</p>
+    <p>Para colocar uma URL externa e abri-lá sem ela sobrepor o seu site, usa-se o paramêtro target="_blank" (janela nova em branco) e o rel="external" (link externo ao meu site). Dessa forma: &lt;a href="https://www.netflix.com/browse" target="_blank" rel="external"&gt;</p>
+    <p><a href="https://www.crunchyroll.com/pt-br/videos/popular" target="_blank" rel="external">Acesse aqui</a> o site da crunchyroll</p>
+    <h2>Usando links internos</h2>
+    <p>Links internos farão uma ligação com outra página que esteja dentro do meu próprio servidor. Para criar um link interno é necessário ter uma outra página. E para fazer isso é necessário implementar um arquivo secundário dentro do index, esse arquivo tem que estar na mesma pasta do index. Dessa forma:&lt;a href="outrapágina.html" rel="next"&gt;</p>
+    <p><a href="pag002.html" rel="next" target="_self">Acesse aqui</a> a minha segunda página</p>
+    <p>Caso o arquivo esteja dentro de uma pasta, é necessário informar o seu caminho. Dessa forma: &lt;a href="nomedapasta/pag003.html"&gt;</p>
+    <p>Para retornar de uma página que está dentro de uma pasta, é necessário informar o caminho reverso que foi feito para chegar até ela, e para isso utiliza-se ../ <br> Dessa forma: &lt;a href="../index.html"&gt;</p>
+    <p>Para informar o caminho de ida para uma pasta, utiliza-se ./</p>
+    <p>Acesse também a minha página de animes <a href="animes/pag003.html">clicando aqui</a></p>
+    <h2>Links para download</h2>
+    <p>Há como inserir também links para download, porém há a necessidade de ter o conteúdo do download salvo no meu servidor em uma pasta, e esse link pode ser inserido da seguinte forma:
+        <pre>
+&lt;p&gt;&lt;a href="livro/04 - Primeiros passos HTML.pdf" 
+download="livro/04 - Primeiros passos HTML.pdf" 
+type="application/pdf">Clique aqui&lt;/a&gt; para executar o download do pdf&lt;/p&gt;
+        </pre>
+    </p>
+    <p><a href="livro/04 - Primeiros passos HTML.pdf" download="livro/04 - Primeiros passos HTML.pdf" type="application/pdf">Clique aqui</a> para executar o download do pdf</p>
+    <p><a href="livro/04 - Primeiros passos HTML.zip" download="livro/04 - Primeiros passos HTML.zip" type="application/zip">Clique aqui</a> para executar o download em ZIP</p>
+    <h2>Imagens dinâmicas</h2>
+    <p>Imagens dinâmicas são imagens que se adaptam sozinhas de acordo com a quantidade de pixels permitida, por exemplo: três imagens são carregadas em código, se a tela for de até 300px carrega uma imagem, se for até 750px carrega outra e assim por diante.</p>
+    <pre>
+Para fazer isso é necessário utilizar:
+
+&lt;picture&gt;
+    &lt;source media="(max-width: quantidade de pixels selecionada px)" srcset="pasta/imagem.png" type="image/png"&gt;
+    &lt;source media="(max-width: quantidade de pixels selecionada px)" srcset="pasta/imagem.png" type="image/png"&gt;
+    &lt;img src="pasta/g.imagem" alt="Imagem flexível"&gt;
+&lt;/picture&gt;
+    </pre>
+    <p>Lembrando que na tag &lt;picture&gt; sempre é posto a tag &lt;img&gt; primeiro, e em seguida coloca-se as outras &lt;source:media:type&gt; <strong>acima</strong> dessa tag.</p>
+    <p><a href="dinamismo/pag004.html">Clique aqui</a> para testar o dinamismo das imagens</p>
+    <h2>Reproduzindo Áudios em HTML5</h2>
+    <p>Para reproduzir áudios é necessário que o arquivo esteja salvo na mesma pasta do index. Os formatos do áudio podem ser mp3, WAV e OGG, depende do navegador do usuário. Há duas formas de inserir um áudio em um código HTML5. A primeira forma é atráves da tag &lt;audio&gt; e dentro dessa tag é necessário inserir os parâmetros para que o áudio se comporte como desejado. A outra forma de inserir áudios em um site é através também da tag &lt;audio&gt;, mas utilizando essa tag para englobar os &lt;source src="" type=""&gt; que vão dentro. Dessa forma:</p>
+    <pre>
+Primeira maneira:
+
+&lt;audio src="pasta/arquivo.mp3/wav/ogg"&gt;</audio>
+<hr>
+Segunda maneira:
+
+&lt;audio&gt;
+    &lt;source src="pasta/midia.mp3" type="audio/mpeg"&gt;
+    &lt;source src="pasta/midia.ogg" type="audio/ogg"&gt;
+    &lt;source src="pasta/midia.wav" type="audio/wav"&gt;
+&lt;/audio&gt;
+    </pre>
+    <p>Também há como inserir parâmetros para o áudio inserido, que são: auto (só vai considerar que o site carregou completamente depois de carregar todo o áudio, isso é perigoso caso o arquivo seja muito grande), metada (carregará o nome do arquivo, duração, data e etc) e none (não carregará nada a não ser que o usuário clique para que isso aconteça). Há também o parâmetro autoplay que fará com que o áudio se inicie automaticamente ao abrir o site, o parâmetro loop para que o áudio se repita ao terminar e o parâmetro controls para que apareça um controle da mídia para o usuário. Caso o navegador do usuário não suporte nenhum tipo de arquivo de áudio, é necessário inserir uma mensagem o avisando e um link para o download. Os parâmetros são inseridos dessa forma:</p>
+    <pre>
+&lt;audio preload="auto/metadata/none" autoplay controls loop&gt;
+    &lt;source src="pasta/midia.mp3" type="audio/mpeg"&gt;
+    &lt;source src="pasta/midia.ogg" type="audio/ogg"&gt;
+    &lt;source src="pasta/midia.wav" type="audio/wav"&gt;
+&lt;/audio&gt;
+
+    caso não haja suporte de áudio:
+
+    &lt;p&gt;Infelizmente o seu navegador não consegue reproduzir áudio &lt;a href="pasta/arquivo.mp3/ogg/wav">Clique aqui&lt;/a&gt; para realizar o download do arquivo&lt;/p&gt;. (inserido dentro da tag audio)
+    </pre>
+    <audio preload="metadata" controls loop>
+        <source src="midia/maquina-do-tempo.mp3" type="audio/mpeg">
+        <source src="midia/maquina-do-tempo.ogg" type="audio/ogg">
+        <source src="midia/maquina-do-tempo.wav" type="audio/wav">
+        <p>Infelizmente seu navegador não consegue reproduzir audio. <a href="midia/maquina-do-tempo.mp3">Clique aqui</a> para baixar o arquivo mp3.</p>
+    </audio>
+    <h2>Inserindo vídeos no meu site com HTML5</h2>
+    <p>Para inserir um vídeo em seu site usando código html5, é necessário ter o vídeo salvo na mesma pasta o index. Dependendo do navegador, só aceitara um certo tipo dessa mídia que são: mp4, m4v, ogg e webm. Como os usuários podem abrir o site nos mais variados navegadores, assim como o áudio, é sempre bom colocar todos os formatos de vídeo. Igualmente o áudio, é necessário abrir a tag &lt;video&gt; e usa-lá para englobar os sources, colocar o arquivo no código, colocar o parâmetro controls (caso desejar também se pode inserir os parâmetros autoplay e loop) e dizer o seu type, porém diferentemente dos áudios, não é necessário colocar o seu preload e é possível escolher a sua largura através do parâmetro width, e caso o vídeo não seja suportado pelo navegador do usuário, escrever um recado assim como no áudio. Também há como inserir uma capa para o vídeo, utilizando o paramêtro poster e colocando o arquivo desejado. Dessa forma:</p>
+    <pre>
+&lt;video width:"número desejado" poster"imagens/arquivo.png" controls &gt;
+    &lt;source src="pasta/midia.mp4" type="video/mp4"&gt;
+    &lt;source src="pasta/midia.ogv" type="video/ogg"&gt;
+    &lt;source src="pasta/midia.m4v" type="video/mp4"&gt;
+    &lt;source src="pasta/midia.webm" type="video/webm"&gt;
+    &lt;p&gt;Infelizmente o seu navegador não consegue reproduzir vídeo&gt;
+&lt;/video&gt;
+    </pre>
+    <video width="600" poster="midia/kksh-obt.jpg" controls loop>
+        <source src="midia/kakashiobito.mp4" type="video/mp4">
+        <source src="midia/kakashiobito.webm" type="video/webm">
+        <source src="midia/kakashiobito.mkv" type="video/mp4">
+        <p>Infelizmente o seu navegador não consegue reproduzir video</p>
+    </video>
+
+    <h2>Inserindo vídeos externos</h2>
+    <hr>
+    <p>Outra forma de inserir vídeos ao seu site, é indo ao youtube ou vimeo e clicando no botão compartilhar, e pegando a incorporação para HTML5 que o próprio youtube ou vimeo dá e colar diretamente sem a necessidade de abrir tag no seu código HTML5. Dessa forma:</p>
+    <img width="600" src="midia/passo-um.png" alt="Print do youtube">
+    <img width="600" src="midia/passo-dois.png" alt="Print do youtube">
+    <img width="600" src="midia/passo-tres.png" alt="Print do youtube">
+    <img width="600" src="midia/codigo.png" alt="Print código HTML5">
+    <br>
+    <hr>
+    <h2>Vídeos inseridos</h2>
+    <iframe width="600" height="315" src="https://www.youtube.com/embed/OzUnqQk4eOg?si=Vf5r002d48uMJAd_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <br>
+    <iframe src="https://player.vimeo.com/video/76979871?h=8272103f6e&title=0&byline=0&portrait=0" width="600" height="338" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+
+    <h2>Estilos Inline</h2>
+    <p style="text-align: justify;">Para fazer estilos inline, é necessário usar o parâmetro style="" dentro da tag que se deseja modificar, por exemplo &lt;body style="background-color: pink;"&gt; muda a cor de fundo da página, &lt;h1 style="color: blue;"&gt; muda a cor da fonte h1. Mas como dito em seu nome "estilos <strong>inline</strong>, a mudança só ocorrerá na tag editada, e as próximas tags iguais a essa, não seguirão esse padrão, logo, será necessário editar todas as desejadas.</p>
+    <br>
+    <br>
+    <strong><p>Não é recomendado fazer dessa forma, pois isso irá poluir o código HTML5 e criar uma grande confusão. Esse método deve ser usado apenas para pequenas mudanças.</p></strong>
+    <img width="600" src="midia/cod.png" alt="Print código HTML5 com CSS3 Inline">
+    <h2>Estilos CSS Internos</h2>
+    <p>Para usar estilos css internos, deve se criar uma tag &lt;style&gt; acima do title, e em seguida criar parâmetros para tags, por exemplo:</p>
+    <pre>
+body{
+    background-color: lightsteelblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+    </pre>
+    <p>Esse código serve para mudar a cor de fundo do body e mudar a fonte e o tamanho de todos os textos que estejam escritos no body. Deve-se usar essa forma para mudar os estilos. Porém há algumas desvantagens nesse tipo de uso de CSS3. A primeira desvantagem é o tamanho de espaço que os styles ocupam, a outra desvantagem é que o códigos dos style não passa de página para página caso eu tanho várias em meu site/na pasta, o que signifique que caso eu queria que todas sigam um padrão, eu necessitaria de copiar o style e colar em cada uma delas, o que é nada prático. Mas para projetos de sites simples, atende bem.</p>
+    <h2>Usando Estilos CSS externos</h2>
+    <p><a href="externo/expcss.html">Clique aqui</a> para ver e entender o uso de css externo.</p>
+    <h2>Psicologia das cores</h2>
+    <p>As cores em um site <strong>são absurdamente importantes</strong>, pois um site bonito e com cores harmônicas entre si, chama bem mais atenção e prende bem mais o usuário. Isso se dá de forma irracional por cada usuário, um site bonito e com cores harmônicas, naturalmente chama mais atenção do subconsciente de um usuário, sem envolver julgamentos próprios nem nada disso.</p>
+    <iframe width="600" height="315" src="https://www.youtube.com/embed/A8UNBs7nxw4?si=9jM7XK_2buZWVdkS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <p><a href="13 - Cores.pdf" download="13 - Cores.pdf" type="application/pdf">Clique aqui</a> para realizar o download do pdf sobre cores.</p>
+    <h2>Tipos de cores em um HTML5 com CSS3</h2>
+    <p>Há quatro formas de cores usando css, a primeira é escolher a cor pelo seu nome, a segunda, por RGB, a terceira por Hexadecimal e a quarta por HSL. As cores podem ser inseridas da seguinte forma:</p>
+    <img width="600" src="midia/cores.png" alt="Usando CSS3 para colocar cores no HTML5">
+    <h2>Harmonia de cores</h2>
+    <p>A harmonia de cores em um site é muito importante, pois é necessário saber qual cor combina com outra para fazer um site harmônico/bonito para ser chamativo e leve para o usuário.</p>
+    <h3>Circulo Cromático</h3>
+    <img width="200" src="midia/circulo.jpg" alt="Circulo Cromático">
+    <p>O circulo cromático e feito pelas cores rgb, aproximadamente 65 milhões de cores. <br>Aqui vou separar 12 cores e considerá-las principais para falar sobre harmonia de cores.</p>
+    <img width="200" src="midia/circulo-simples.png" alt="Circulo cromático com 12 cores">
+    <p>Esse circulo cromático é principalmente utilizado para se conseguir harmonizar cores. <br>Um dos principais pontos para a beleza de um site é a simetria, o outro ponto são as cores. Cores são muito importantes pois podem causar inúmeras sensações no usuário, e a que se deseja principalmente causar, é fazer o usuário irracionalmente achar o site bonito.</p>
+    <h3>Cores primárias</h3>
+    <p>As cores primárias dentro do circulo cromático de 12 cores são: amarelo, vermelho e azul. A harmonia gerada por essas cores não é tão bonita, mas são importantes para podermos representar as outRas cores.</p>
+    <h3>Cores secundárias</h3>
+    <p>As cores secundárias dentro do circulo cromático de 12 cores são: laranja, violeta e verde. A harmonia gerada por essas cores não é tão bonita, meio grosseira.</p>
+    <h3>Cores terciárias</h3>
+    <p>As Cores terciárias são todas as outras que são misturas das cores primárias e secundárias, quando for nomear uma cor terciária, é necessário colocar o nome da cor primária antes e em seguida o nome da cor secundária ex: amarelo-esverdeado, amarelo-alaranjado, vermelho-alaranjado etc. Toda cor dita terciária está entre uma cor primária e uma cor terciária. Essas cores são: amarelo-esverdeado, amarelo-alaranjado, vermelho-alaranjado, vermelho-arroxeado, azul-arroxeado, azul-esverdeado e amarelo-esverdeado.</p>
+    <img width="350" src="midia/cores-ter.jpg" alt="Cores terciárias em um circulo cromático">
+    <h3>Temperatura de cores</h3>
+    <img width="250" src="midia/temp-cores.jpg" alt="temperatura de cores">
+    <br><br>
+    <strong><mark style="background-color: greenyellow;">Uma paleta de cores deve ter de 3 a 5 cores.</mark></strong>
+    <h3>Cores complementares</h3>
+    <p>Cores complementares são as cores que tem mais contraste entre si. Para escolher cores complementares, é necessário selecionar uma cor no circulo cromático e em seguida a cor imediatamente oposta a essa cor escolhida primeiro. Ex: Violeta e amarelo, vermelho e verde, azul e laranja, etc. Isso não siginifica que irá ficar bonito, porém para identificar as cores que mais contrastam entre si é dessa forma.</p>
+    <h3>Cores análogas</h3>
+    <p>As cores análogas, ao contrário das cores complementares, são as cores que não tem grande contraste entre si, para identificar cores análogas, é necessário escolher uma cor e pegar as cores imediatamente ao lado dessa cor escolhida primeiro.</p>
+    <h3>Cores análogas relacionadas</h3>
+    <p>Cores análogas relacionadas são feitas para fazer um contraste não tão chamativo, para fazê-las é necessário escolher uma cor principalm pegar uma das cores análogas à ela, pular uma cor e pegar a cor em seguida da cor pulada.</p>
+    <img width="200" src="midia/analog.jpg" alt="Cores análogas relacionadas">
+    <h3>Cores intercaladas</h3>
+    <p>Cores intercaladas tem um princípio parecido com o antrerior, porém tem um contraste maior entre elas.</p>
+    <img width="200" src="midia/cores-interc.jpg" alt="Cores intercaladas">
+    <h3>Cores triádicas</h3>
+    <p>As cores triádicas são cores intercaladas, para fazê-las é necessário escolher uma cor principal, pular três cores e pegar a cor onde cair depois de ter pulado as três, depois pular mais três e fazer o mesmo.</p>
+    <img width="200" src="midia/cores-tri.jpg" alt="Cores triádicas">
+    <h3>Cores em quadrado</h3>
+    <p>São parecidas com cores triádicas, mas pula-se apenas duas cores ao invés de três e fazer isso três vezes e não duas.</p>
+    <img width="200" src="midia/cores-qua.jpg" alt="Cores em quadrado">
+    <h3>Cores tetrádicas</h3>
+    <p>São conseguidas da seguinte maneira, escolha uma cor qualuer e em seguida ache sua cor complementar, pegar outra cor e achar sua cor complementar novamente.</p>
+    <img width="200" src="midia/cores-tet.jpg" alt="Cores tetrádicas">
+    <h3>Monocromia</h3>
+    <p>Trabalha com apenas uma cor, para realizar necessita-se de escolher uma cor e modificar a saturação e o brilho dessa cor.</p>
+    <img width="200" src="midia/monocr.jpg" alt="Monocromia">
+    <h2>Criando Gradientes com CSS (degradê)</h2>
+    <p>Para criar um gradiente com CSS, é necessário colocar o parâmetro background-image e escolher a função interna linear-gradient, esse linear-gradient irá indicar a diração do gradiente e quantas cores serão inseridas no mesmo. Dependendo da direção do gradiente, é necessário fazer uma configuração global de tamanho nas CSS, para fazer uma configuração global é necessário criar um seletor global usando *{parâmetro desejado} (* significa all)</p>
+    <h2>Criando um exemplo de site com CSS3</h2>
+    <a href="pagcss/pagcss.html">Clique aqui para acessar</a>
+    <h2>Tipografia</h2>
+    <h3>Conceitos fundamentais da tipografia.</h3>
+    <p>A tipografia foi inventada quando se deu a necessidade de formar letras que facilitassem a leitura. A palavra tipografia vem de duas palavras gregas: týpos = colocar coisas no papel e graphía =  escrita. Sendo assim, tipografio é o estudo de como vou escrever coisas no papel/telas. Escolher as fontes de maneira correta é de suma importância na criação de um site, pois quando um site é bonito e aconchegante visualmente, o usuário fica mais preso ao site. Assim como as cores, as fontes também passam uma emoção ao usuário dependendo da fonte escolhida.</p>
+    <h2>Anatomia dos tipos</h2>
+    <p>Tipo é cada uma das letras, é o modo como vai ser desenhado cada uma das letras. Quando toda fonte é desenvolvida é necessário se preocupar com o tamanho, que é o espaço que ela ocupa. Então, é necessário saber o espaço que a letra vai ocupar ao escolher a fonte. A altura das letras minúsculas de cada fonte é definida a partir do x minúsculo dessa fonte. Já para as letras maiúculas há um tamanho proporcionalmente maior que é chamado de altura das maiúsculas. Outra altura que existe que na grande maioria das vezes é do tamanho das maiúscula, é a altura de vazamento das letras mnúscula, como visto na letra <strong>g</strong> que vazou para baixo, esse vazamento para baixo é chamado de descendente, já o vazamento para cima como visto nas letras <strong>k b</strong>, é chamado de altura ascendente.  todo dessas alturas é chamado de corpo.</p>
+    <img width="500" src="midia/altura.png" alt="Altura das fontes"> <br>
+    <img width="600" src="midia/categorias.png" alt="Categorias de Fontes"> <br>
+    <iframe width="600" height="315" src="https://www.youtube.com/embed/YZfzstEquas?si=I16uuojEJhR6E4J1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <h2 style="text-align: left;">Famílias de fontes</h2>
+    <pre>
+        Font-family mais comuns:    Arial, Verdana e Helvetica
+
+    font-family: 'Courier New';   -> nomes compostos precisam de 'aspas'
+    font-family: sans-serif;	    -> qualquer fonte sem serifa
+    font-family: serif;		    -> qualquer fonte com serifa
+    font-family: monospace;     -> qualquer fonte monoespaçada
+
+Safe combination:
+
+	Se não tiver uma opção de fonte, passa para a seguinte. (Pesquisar mais: CSS web safe font combinations). 
+
+	Ex:	font-family: Arial, Helvetica, sans-serif;
+		font-family: 'Times New Roman', Times, serif;
+
+ *Dica: Após "font-family:", ao clicar Ctrl + Espaço, o VS Code sugere as principais safe combinations.
+    </pre>
+
+    <h2>Tamanhos de Fontes</h2>
+    <p>Existem várias formas de se colocar um font-size, há medidas absolutas e as medidas relativas.</p>
+    <ol><strong>Medidas Absolutas</strong>
+    <ul type="disc">
+        <li>Centímetro (cm)</li>
+        <li>Milímetro (mm)</li>
+        <li>Polegada (in)</li>
+        <li>Pixel (px)</li>
+        <li>Ponto (pt)</li>
+        <li>Paica (pc)</li>
+    </ul>
+</ol>
+    <p>Essas são as medidas absolutas, 1 cm sempre será um cm, mas pode haver um problema na hora de representar isso em diferentes telas, por exemplo, um navegador pode ter dificuldade de representar o tamanho desejado em telas variadas, será diferente na tela de uma tv, diferente na tela de um celular, diferente nas telas de retina, etc. <br><strong>(ponto e paica não se recomenda utilizar em material que será exibido em tela, é mais para papel)</strong>.</p>
+    <ol><strong>Medidas Relativas</strong>
+        <ul type="disc">
+            <li>em (medida relativa ao tamanho atual da fonte)</li>
+            <li>ex (relativo a altura x de uma fonte)</li>
+            <li>rem (relativo ao rut, fonte que estpa configurada no body)</li>
+            <li>vw (view width, que quer dizer a largura da view port (tamanho da tela))</li>
+            <li>vh (altura de view port)</li>
+            <li>Porcentagem (%)</li>
+        </ul>
+    </ol>
+    <p>O mais utilizado é o em, que é a altura do M maiúsculo.
+    <br>
+    Recomendações.<br>&rarr;para medida de fonte (font-size), recomenda-se o uso do px ou em.</p>
+    <h2>Tamanho de fontes e suas medidas</h2>
+    <p><a href="fontes/fonte.html">Clique aqui</a> para acessar a página com o teste e a explicação das fontes.</p>
+    <h2>Peso, Estilo e Shorthand</h2>
+    <p>Peso é o que define/faz a fonte ficar mais "magrinha" ou mais "gordinha". Para definir o peso da fonte usa-se font-weight. Há alguns tipos de peso, que são: lighter, normal, bold e o bolder. Também há como definir o peso da fonte por meio de números, que vai de 100 à 900, para usar por meio de números, põe-se de 100 em 100.</p>
+    <p>Logo abaixo estão estabelecidos alguns padrões que podem ser estabelecidos nas fontes.</p>
+    <img width="400" src="midia/body.png" alt="Padrões para fontes em CSS">
+    <h3>Shorthand Font</h3>
+    <p>O shorthand é basicamente simplificar o código CSS, reduzir o número de declarações feitas, condensando-as em uma só declaração.</p>
+    <img width="500" src="midia/shorthand.png" alt="Shorthand Font">
+    <p>Deve-se colocar sempre nessa ordem de cima, font-style &rarr; font font-weight &rarr; font-size &rarr; font-family</p>
+    <h2>Inserção de fontes externas/Fontes com Google Fonts</h2>
+    <a href="fontes/gooflefonts.html">Clique aqui para ver a explicação e prática</a>
+    <h2>Usando fontes externas baixadas</h2>
+    <p> <a href="fontes/font-ext.html">Clique aqui</a> para ver e entender como se usa fontes externas <strong>baixadas</strong> no seu código HTML5 + CSS3.</p>
+    <h2>Alinhamento de texto com CSS</h2>
+    <p>O textos quando inseridos no código HTML5, automaticamente vão para o lado esquerdo. Para ajeitar isso e colocar o texto na posição desejada, é necessário usar CSS inline, interno ou externo. O que deve ser declarado no css é o seguinte: <br> <strong><small>OBS: como você pode ver, eu já fiz o uso do alinhamento de texto com CSS, os h2 por exemplo eu estabeleci um padrão através de uma declaração para que todos os h2 inseridos no código ficassem à esquerda.</small></strong></p>
+    <p><a href="alinhamento/alin.html">Clique aqui</a> para entender e ver o uso de alinhamento com CSS</p>
+    <h2>Seletores Personalizados com CSS</h2>
+    <p>As vezes em um código CSS é feita uma declaração para toda uma tag, quando se deseja mudar o padrão de apenas <strong>uma</strong> dessas tags, é necessário usar os seletores.</p>
+    <p><a href="seletores/selet.html">Clique aqui</a> para ver e entender o uso de seletores personalizados com CSS.</p>
+    <h2>Diferenças entre id e class</h2>
+    <p>A diferença entre id e class é basicamente que o id pode identificar apenas um elemento enquanto a classe pode identificar mais de um de uma só vez.</p>
+    <p>Class serve para fazer o mesmo do id, adicionar parâmetros apenas em declarações selecionadas, mas diferentes do id, o class pode ser usado para mais de um item.</p>
+    <p><a href="seletores/selet.html">Clique aqui</a> para ver e entender o uso do class.</p>
+    <h2>Pseudo-classes em CSS</h2>
+    <p><a href="pseudo/pseudoclasses.html">Clique aqui</a> para ver e entender as pseudo-classes</p>
+    <h2>Personalizando Links</h2>
+    <ul>
+        <li><a href="https://www.crunchyroll.com/pt-br/videos/popular">Crunchyroll</a></li>
+        <li><a href="https://www.netflix.com/browse">Netflix</a></li>
+        <li><a href="https://x.com/home?lang=pt">Twitter</a></li>
+    </ul>
+    <p>A configuração padrão dos links sem CSS é essa, links azuis e sublinhados ou azul escuro e sublinhados caso já os tenha visitado.</p>
+    <p>Para sobrepor essas configurações padrão, é necessário criar um estilo com CSS.<p>
+    <p><a href="linksperso/link.html">Clique aqui</a> para ver entender como é feita a personalização de links</p>
+    <h2>Modelo de Caixas (Box Model)</h2>
+    <p>O modelo de caixas se aplica tanto ao HTML5 quanto ao CSS3, ele serve para ajudar na organização do design de uma página. A ideia de caixas vem literalmente de caixas reais, e uma das possibilidades de a serem feitas, é inserir caixas dentro de caixas, isso se chama aninhamento. Todo elemento visível de um site é uma caixa, ou seja, quando eu crio um seletor em css para h1 por exemplo, na verdade eu estou estilizando a caixa. <br>
+    os termos que se referem a modificação de caixa são:</p>
+    <ul>
+        <li>height: altura</li>
+        <li>width: largura</li>
+    </ul>
+    <p>Outra coisa que pode ser feita com uma caixa é traçar uma linha em volta do conteudo, em CSS chamado de <strong>border</strong>, por padrão essa linha ficará grudada na caixa. Para criar um espaço entre a linha traçada e a caixa usa-se a declaração <strong>padding</strong> (acolchoamento/preenchimento), o padding de uma caixa pode ser definido de certo modo para cado lado ou igualmente para todos os lados.</p>
+    <p>Um problema que se enfrenta ao criar uma caixa acima da outra, é elas aparecerem na tela coladas uma na outra, para criar um espaço entre essas duas caixas usa-se a declaração <strong>margin</strong> que faz parecido com o padding, mas ao invés de criar uma distancia entre o border a caixa, criar uma distância externa (configurável) entre as caixas.</p>
+    <p>Outra área que existe em uma caixa, é a <strong>outline</strong> (contorno/traçado), que fica colada na border só que por fora da caixa.</p>
+    <h3>Tipos de caixa</h3>
+    <h4>Box level e Inline level</h4>
+    <p>Uma caixa box-level ocupará 100%da largura da tela e funcionará tipo como uma área de colisão, fará com que por exemplo, um &lt;p&gt; colocado pule para o seu outro lado.</p>
+    <p>Uma caixa inline-level será inserida na linha e não fará que o conteúdo seja partido como a caixa acima.</p>
+    <img width="500" src="midia/boxlev.png" alt="Box-level e Inline-level">
+    <p>Exemplos de Box-level e Inline-level</p>
+    <img width="500" src="midia/exp.png" alt="Exemplos de bo-level e inline-level">
+    <h2>Modelo de Caixas na prática</h2>
+    <p><a href="caixas/caixa.html">Clique aqui</a> para ver e entender os modelos de caixa na prática</p>
+    <h2>Grouping tags em HTML5</h2>
+    <p>As tags de agrupamento sempre foram as duas mesmas, &lt;div&gt; e &lt;span&gt;, a div sendo uma caixa box-level e o span uma caixa inline-level, porém com a criação do HTML5, foram inseridas várias grouping tags semânticas.</p>
+    <pre>
+Tags de agrupamento (grouping tags):
+
+- Sem valor semântico:
+
+&lt;div&gt;         -> block
+
+&lt;span&gt;        -> inline
+
+- Com valor semântico:
+
+&lt;header&gt;      -> cabeçalho
+
+&lt;nav&gt;         -> para menus, links, navegação
+
+&lt;main&gt;        -> principal
+
+&lt;section&gt;      -> seção
+
+&lt;article&gt;      -> artigo
+
+&lt;aside&gt;        -> periférico ao artigo (ex: escritor / autor)
+
+&lt;footer&lt;       -> rodapé
+    </pre>
+    <p><a href="caixas/caixa2.html">Clique aqui</a> para ver e entender o que são e para que serve as grouping tags</p>
+    <a href="caixas/testebox.html">Meu teste</a>
+    <h2>Sombras nas caixas</h2>
+    <a href="caixas/caixa2.html">Clique aqui para ver as sombras inseridas</a>
+    <h2>Caixas com vértices arredondados</h2>
+    <p>Como visto e explicado anteriormente, todas as tags são caixas, box-level ou inline-level, sendo box-level caixas que pegam de fora a fora da página, e inline-level as que ocupam somente um espaço pequeno na tela.</p>
+    <p>Para arredondar os vértices de uma caixa, é necessário usar CSS e fazer a seguinte declaração:</p>
+    <pre>
+border-radius: 10px 
+        <p><small><strong>apenas um exemplo</strong></small></p>
+    </pre>
+    <p>Também há como configurar cada lado um por um, dessa forma:</p>
+    <pre>
+border-top-left-radius: 4px;
+border-top-right-radius: 6px;
+border-bottom-right-radius: 8px;
+border-bottom-left-radius: 5px
+
+<strong><small>ou apenas fazendo um shorthand</small></strong>
+
+border-radius: 10px 20px 30px 40px;
+
+<strong><small>!apenas exemplos, pode-se colocar a quantidade de pixels desejada!</small></strong>
+
+<strong><small>Se apenas duas medidas forem colocadas, as bordas superior esquerda e inferior direita ficarão iguais, assim como a inferior esquerda e a superior direita</small></strong>
+    </pre>
+    <p></p>
+    <p><a href="caixas/caixa2.html">Clique aqui</a> para ver caixas com vértices arredondados</p>
+    <h2>Bordas decoradas (com GIMP)</h2>
+    <ol type="1">
+        <li>Abra o Gimp</li>
+        <li>Arquivo novo</li>
+        <li>Colocar largura e altura bem pequenos</li>
+        <li>Opções avançadas</li>
+        <li>Resolução baixa</li>
+        <li>Mudar a cor de fundo para transparente (png)</li>
+        <li>Trace duas linhas verticais e duas horizontais</li>
+        <li>Desenhe bordas circulares</li>
+        <li>Desenhe 8 bolinhas idênticas em torno do quadrado</li>
+        <li>Mude as cores das bolinhas que estão nos vértices</li>
+        <li>Exporte a imagem</li>
+    </ol>
+    <p>Ficará assim:</p>
+    <img width="500" src="midia/bordas.png" alt="" style="background-color: grey;">
+    <br> <br>
+    <a href="borda/testeborda.html">Clique aqui para ver na prática</a>
+    <h2>Planejamento de estrutura de site</h2>
+    <p>O planejamento de um site é uma coisa muito importante, primeiro deve-se planejar o layout do site, a paleta de cores e as fontes que vão ser usadas. Para planejar o layout de um site um facilitador é o site <a href="https://mockflow.com/" target="_blank" rel="external">MockFlow</a>, esse site serve para criar mocks (wireframes/estruturas de sites). Para definir as cores usa-se o <a href="https://color.adobe.com/pt/create/color-wheel" target="_blank" rel="external">Adobe Colors</a>. Para escolher a fonte do site usa-se o <a href="https://fonts.google.com/" target="_blank" rel="external">Google Fonts</a> ou o <a href="https://www.dafont.com/pt/" target="_blank" rel="external">DaFont</a>.</p>
+    <p>Uma coisa muito importante para o site é a responsividade e adaptação do site.</p>
+    <h2>Variáveis em CSS</h2>
+    <p>
+        Variáveis em CSS funcionam da seguinte forma: todas as variáveis em CSS tem que começar com a declaração root e dois traços (--) para indicar as variáveis e em seguida o seu nome. Ficando da seguinte forma: 
+    </p>
+    <img width="500" src="midia/root.png" alt="root em css">
+    <p>
+        Fazendo isso você <strong>criou</strong> as variáveis, para usá-las (nesse exemplo como cores), basta fazer da seguinte forma:
+    </p>
+    <img width="500" src="midia/var.png" alt="usando variáveis em css">
+    <h2>
+        Responsividade para sites
+    </h2>
+    <p>
+        Responsividade é um conceito bem simples, que é adaptar o tamanho do conteúdo do seu site à tamanhos de tela diferentes (televisões, tablets, celulares, monitores...).
+    </p>
+    <p>
+        Um dos recursos mais simples, é poder limitar o tamanho mínimo e o tamanho máximo de uma inteface, não é o único, mas hoje explicarei apenas esse mais simples e mais pra frente aprendo outros.
+    </p>
+    <br>
+    <p>
+        <a href="responsividade/responsivo.html">Clique aqui</a> para ver a explicação e feito na prática.
+    </p>
+    <h2>
+        Git e Github
+    </h2>
+    <p>
+        Git é um repositório local, já o GitHub é um repositório remoto.
+    </p>
+    <h2>Colocando imagens de fundo</h2>
+    <p>Para colocar uma imagem de fundo é necessário utilizar a declaração background-image: url ('caminho da imagem'); em CSS.</p>
+    <a href="fundo.html">Ficando assim:</a>
+    <p>Para definir o tamanho desse fundo, utiliza-se a declaração background-size: tamanho desejado para a imagem;</p>
+    <p>Para fazer com que a imagem <strong>não</strong> se replique, é necessário fazer a declaração background-repeat: no-repeat; <br> A questão de eixo X e eixo Y se aplica a esse conceito, podendo ser feitas as declarações background-repeat: repeat-y ou repeat-x para que a imagem se replique mas em apenas um desses eixos.</p>
+    <h2>Configurando a posição da imagem de fundo do site</h2>
+    <p>Como visto antes, para insetir uma imagem de fundo no site é necessário utilizar a declaração background-image: url ('caminho da imagem');</p>
+    <p>Já para configurar a posição dessa imagem, deve-se usar background-position: posição desejada; (sendo essas posições right, left, top e bottom)</p>
+    <a href="fundo003.html">Ficando assim</a>
+    <br> <br>
+    <a href="fundo004.html">Outro exemplo</a>
+    <h2>Mudando o tamanho da imagem de fundo</h2>
+    <p>Para mudar o tamanho de uma imagem de fundo usa-se background-size: 100%; | várias medidas podem ser usadas, como px, %, mas é bom colocar 100% pois usando px pode ficar bom em uma tela, porém não em outrasm e o 100% faz com que a imagem de fundo ocupe 100% da tela independente de seu tamanho. Porém usando 100% a imagem sempre seguirá o tamanho da tela, fazendo com que em alguns casos, se a tela puder ser diminuída ou aumentada, que fique uma parte preta embaixo da imagem.</p>
+    <p>No nosso caso para resolver, é necessário utilizar o background-size: contain;</p>
+    <p>Existem alguns posicionamentos para o background, sendo eles: auto (faz com que a imagem se posicionne automaticamente), contain (faz com que a imagem seja 100% exibida sem nenhum corte), cover (faz com que a imagem cubra a tela inteira mesmo que a imagem seja um pouco cortada, não exibe a imagem inteira mas ocupa 100% da viewport).</p>
+    <a href="fundo005.html">Clique e veja</a>
+    <h2>background-attachment e shorthand</h2>
+    <p>background-attachment é como se define se o background estará vinculado conteúdo do site ou se ele ficará travado na tela.</p>
+    <p><a href="atach.html">Clique aqui</a> para ver na prática.</p>
+    <p>As possíveis configurações que podem ser feitas usando background-attachment são:</p>
+    <pre>
+background-attachment: scroll; (é a configuração padrão e faz com que o fundo role juntamente com o conteúdo)
+
+background-attachment: fixed; (faz com que o fundo fique fixado, mesmo que o conteúdo esteja sendo rolado)
+    </pre>
+    <h3>shorthands para background</h3>
+    <p>As shorthands para background, seguem a seguinte ordem de prioridade:</p>
+    <ul>
+        <li>
+            color
+        </li>
+        <li>
+            image
+        </li>
+        <li>
+            position
+        </li>
+        <li>
+            repeat
+        </li>
+        <li>
+            <strong>size</strong>
+        </li>
+        <li>
+            attachment
+        </li>
+    </ul>
+    <p>E fica dessa forma</p>
+    <pre>
+background: black url('imagens/wallpaper002.jpg') center center no-repeat cover fixed;
+    </pre>
+    <p>porém o size não funciona se for feito em shorthand, logo, é necessário fazer a configuração do background-size fora do shorthand. Ficando assim:</p>
+    <pre>
+background: black url('imagens/wallpaper002.jpg') center center no-repeat fixed;
+background-size: cover;
+    </pre>
+    <p><small>como as configurações ficarão, varia de caso para caso.</small></p>
+    <h2>Centralização vertical de caixas</h2>
+    <p>Para centralizar uma imagem ao meio horizontalmente, é usado o margin: auto; como já conhecemos e utilizamos inúmeras vezes. Já para fazer a centralização vertical, é necessário utilizar o<strong> position: relative;</strong> no container que engloba o conteúdo, no conteúdo englobado pelo container, deve-se colocar a declaração <strong>position: absolute;</strong> que faz com que o elemento possa ser configurado pelas configurações <strong>left</strong> e <strong>top</strong> geralmente utilizando % (porcentagem) para defirnir os valores de posicionamento.</p>
+    <p>Para conseguir mexer melhor ainda no conteúdo inserido no container, usa-se a declaração <strong>transform:; que tem várias formas possíveis de se mexer na posição ou escala e etc do conteúdo.</strong></p>
+    <p>No nosso caso, a necessidade é de centralizar o conteúdo dentro do container, então deve-se usar a declaração <strong>transform: translate();</strong> que mexe no conteúdo utilizando valores positivos ou negativos de acordo com a posição e direção desejada em que ele seja inserido.</p>
+    <ul>
+        <li>
+            esquerda e cima = valores negativos
+        </li>
+        <li>
+            direita e baixo = valores positivos
+        </li>
+    </ul>
+    <a href="alinhamento.html">Clique para ver</a>
+    <h2>Tabelas em HTML</h2>
+    <p>
+        Tabelas são usadas para fazer listas em um site.
+    </p>
+    <p>Todas as tabelas seguem uma hierarquia, que é a seguinte:</p>
+    <pre>
+table 
+(dentro de table) table row
+(dentro de table row) header
+table data 
+    </pre>
+    <p>Para fazer uma tabela, usa-se as tags:</p>
+    <pre>
+table (para criar a div de tabela)
+th (para o header)
+tr (para criar as linhas de tabela)
+td (para informar os dados da tabela (td = table data))
+    </pre>
+    <img src="midia/tabelahtml.png" alt="construção em HTML5 de uma tabela">
+    <p>Para criar as divisões entre tabelas, deve-se usar CSS, fazendo as seguintes declarações:</p>
+    <img src="midia/tabela.png" alt="estilizando tabelas com CSS">
+    <br> <br>
+    Veja na <a href="tabela.html">prática</a>
+    <small>A declaraçao <strong>border-collapse: ;</strong> serve para ditar como ficará a separação entre os dados da tabela, as possíveis declarações que podem ser feitas com border-collapse são:</small>
+    <pre>
+border-collapse: separate; (faz com que as informações fiquem separadas)
+border-collapse: collapse; (faz com que as informações fiquem lado a lado, "grudadas")
+    </pre>
+    <h2>Alinhando o conteúdo de tabelas</h2>
+    <a href="tabela002.html">Clique aqui para ver e entender</a>
+    <h2>Criando tabelas grandes</h2>
+    <a href="tabela003.html">Clique aqui para ver</a>
+    <h2>Caption e Escopo de títulos em tabelas</h2>
+    <p>caption é uma tag utilizada para identificar o conteúdo que será exibido em uma tabela, como uma espécie de título.<br>Semanticamente ele será posto em cima da tabela, porém pode ser posto em qualquer lugar. Mas para organização põe-se essa tag acima da tag thead</p>
+    <p>Como fica no código:</p>
+    <img src="midia/caption.png" alt="">
+    <br> <br> <br>
+    <p>Como fica visualmente:</p>
+    <img src="midia/caption-tabela.png" alt="">
+    <p>Para indicar o escopo em uma tabela, deve-se usar <strong>dentro</strong> da tag &lt;th&gt; a classificação scope="col" para indicar se o escopo é o cabeçalho de uma coluna, ou scope="row" para indicar se o escopo é o cabeçalho de uma linha. Ficando assim:</p>
+    <ul>
+        <li>
+            &lt;th scope="col"&gt;
+        </li>
+        <li>
+            &lt;th scope="row"&gt;
+        </li>
+    </ul>
+    <strong>
+        <small>
+            <p>Essas não são as únicas classificações possíveis para a classificação scope.</p>
+        </small>
+    </strong>
+    <p>Utilizar o scope serve para tornar mais fácil que os mecanismos de busca (Google por exp.) analisem e entendam de forma coerente uma tabela em um site.</p>
+    <h2>Efeito zebrado em tabelas</h2>
+    <p>O efeito zebrado em tabelas serve para facilitar a visalização e entendimento do conteúdo da tabela.</p>
+    <p>Para fazer esse efeito usa-se pseudo-classes em CSS. Ficando assim:</p>
+    <pre>
+tbody > tr:nth-child(2n) {
+    background-color: lightgray;
+}
+    </pre>
+    <p>2n Significa que de 2 em 2 será colocado uma tarja cinza, pode-se colocar quantos n for necessário, 3n, 4n, 5n. Depende da preferência de quem estiver fazendo o site.</p>
+    <p>Outra coisa que pode ser feita, é fazer as declarações das pseudo-classes com odd (ímpar), even (par) ou subtraindo números. Isso fará com que linhas ímpares ou pares fiquem de um certo modo, por exp: <br><br> tbody > tr:nth-child(odd) { <br>
+        background-color: lightgray;<br>
+    } <br><br>
+    fará com que apenas as linhas ímpares fiquem com o fundo lightgray.
+    <br><br>
+    <pre>
+        tbody > tr:nth-child(even) {
+            background-color: lightgray;
+        }
+
+        ou
+
+        tbody > tr:nth-child(odd) {
+            background-color: lightgray;
+        }
+
+        ou
+
+        tbody > tr:nth-child(2n-1) {
+            background-color: lightgray;
+        }
+    </pre>
+    <a href="tabela003.html">Veja</a>
+    <h2>Mesclagem de células <strong><small>*importante*</small></strong></h2>
+    <p>A mesclagem de células serve para fazer com que uma célula ocupe duas colunas caso seja necessário, para fazer isso usa-se mesclagens dentro da tag &lt;td&gt; da seguinte forma: </p>
+    <pre>
+        &lt;table&gt;
+            &lt;tr&gt;
+                &lt;td&gt;A&lt;/td&gt;
+                <strong>&lt; colspan="2">B&lt;/td&gt;</strong>
+    </pre>
+    <p>Essa mesclagem serve para que uma única célula ocupe duas colunas (por isso colspan e por isso o número 2), mas também existe a mesclagem de células de linhas, a rowspan. Que funciona da seguinte forma:</p>
+    <a href="tabela004.html">Veja</a>
+    <h2>Tabelas Completas e Escopos de Grupo</h2>
+    <p>&lt;th&gt; é um tag que possoi a propriedade de escopo, sendo eles col, colgroup, row e rowgroup. O escopo serve para facilitar a ferramenta de busca usada para identificar um site identifique melhor uma tabela.</p>
+    <p>Os escopos de grupo (rowgroup e colgroup) são usados quando um &lt;th&gt; é o título de mais de uma linha ou mais de uma coluna.</p>
+    <h2>Agrupando colunas com colgroup</h2>
+    <p>As vezes é necessário destacar uma coluna, diferentemente da maneira de destacar uma linha, destacar uma coluna é feito por outro meio. Para destacar uma coluna faz-se da seguinte forma:</p>
+    <pre>
+&lt;colgroup&gt;
+    &lt;col class="cnome"&gt;
+    &lt;col class="csexo"&gt;
+    &lt;col class="cidade"&gt;
+    &lt;col class="cprof"&gt;
+&lt;/colgroup>
+    </pre>
+    <p>Cria-se com a tag &lt;col&gt; a quantidade de tabelas que há dentro de table e dá-se uma classe para cada uma, ai basta escrever essa classe nos estilos e modificá-la com as CSS.</p>
+    <p>Caso haja a necessidade de modificar duas colunas para que elas fiquem com as mesmas configuraçoes, basta remover um dos "col" e colocar um span="2" , isso fará com que o "col" modifique duas colunas.</p>
+    <pre>
+&lt;colgroup&gt;
+    &lt;col class="grupo" span="2"&gt;
+&lt;/colgroup&gt;
+    </pre>
+    <a href="tabela006.html">Veja</a>
+    <h2>Tabelas Responsivas</h2>
+    <a href="tabela007.html">Veja</a>
+    <h2>iframes</h2>
+    <a href="iframes/iframe001.html">Veja</a>
+    <h2>Navegação no iframe</h2>
+    <a href="iframes/iframe2.html">Página de exemplo</a>
+    <p>Nessa página, pode-se ver 3 links, cada um direcionado à uma página. A proposta é fazer com que ao invés desses links mandarem para uma página externa, fazer com que ao serem clicados, apareça o seu conteúdo no iframe.</p>
+    <p>Para fazer isso, basta usar a propriedade "name" dentro da tag do iframe e linká-lo ao link usando "target", <a href="iframes/exemplo.html">dessa maneira:</a></p>
+    <h3>(Conteúdo extra ao anterior)</h3>
+    <p><strong>Conteúdo no iframe por código</strong></p>
+    <p>No exercício anterior, fizemos um iframe interativo que mudava de acordo com o link clicado. Porém, antes dos links serem clicados, o iframe ficava vazio, vamos agora ver como fazer para colocar um conteúdo nesse iframe vazio.</p>
+    <p>Para colocar um conteúdo estático simples nesse iframe sem a necessidade de criar um html5 dedicado à isso, utiliza-se o parâmetro "scrdoc", ao invés do "scr" que vem padrão ao criar um iframe. Esse parâmetro faz com que seja possível escrever códigos HTML5 dentro do iframe. (o recomendado é criar uma página padrão dedicada ao iframe, mas conhecimento nunca é demais).</p>
+    <pre>
+&lt;iframe srcdoc="&lt;h1&gt;Escolha uma das opções acima&lt;/h1&gt; &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ratione dicta ab ducimus corporis vero laborum vel eos numquam itaque est nisi nostrum fuga, quos sit natus, ea iste? Esse!
+&lt;/p&gt;&lt;&lt;img src='../midia/code.png'&gt;" frameborder="1" id="tela" name="frame"&gt;&lt;/iframe&gt;
+    </pre>
+    <h1 class="ifr"><mark style="background-color: greenyellow; padding: 10px" >Iframe aprofundado</mark></h1>
+    <br>
+    <h2>Tornando iframes mais seguros</h2>
+    <p>Alguns iframes podem ser perigosos pôr em seu site por questões de roubo de dados, para previnir que um iframe seja capaz de roubar dados estando presente em seu site, basta colocar a declaração "sandbox" com o valor "sandbox" (valor padrão, básico), ficando assim: <br> <br>&lt;iframe src="#" sandbox="sandbox"&gt;</p>
+    <p>Outros valores para o "sandbox" são:</p>
+    <ul>
+        <li>sandbox="allow-same-origin" (faz com que apenas os iframes que sejam da mesma origem/servidor do index possam coletar dados)</li>
+        <li>sandbox="allow-forms" (permite formulários dentro de iframes)</li>
+        <li>sandbox="allow-scripts" (permite scripts dentro dos iframes)</li>
+    </ul>
+    <small><p>como o sandbox está ativo, essas são as únicas configurações permitidas, todas as outras estão bloqueadas.</p></small>
+    <small><p>não existe apenas essas configurações.</p></small>
+    <p>Outra maneira de tornar um iframe mais seguro é utilizando ainda dentro do iframe a declaração "referrerpolicy" com o valor "no-referrer", ficando da seguinte maneira <br> <br>referrerpolicy="no-referrer".</p>
+    <p>Isso faz com que o conteúdo que está carregado dentro do iframe não colete dados.</p>
+    <h2>Dicas para iframes melhores</h2>
+    <a href="iframes/iframe003.html">Veja</a>
+    <h2>Criando formulários com HTML5</h2>
+    <p>Formulários são aquelas caixas de texto presentes em sites para informações sejam inseridas. Os formulários tem muitos usos e hoje veremos como criá-los e onde utilizá-los</p>
+    <a href="forms/formulario.html">Veja</a>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento</title>
+    <style>
+        body{
+            background-color: rgb(209, 162, 253);
+            font: normal 16px Arial, Verdana, serif;
+        }
+
+        h2{
+            text-align: left;
+        }
+
+        h3{
+            text-align: center;
+        }
+
+        h4{
+            text-align: right;
+        }
+
+        p{
+            text-align: justify;
+            text-indent: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tipos de alinhamento</h1>
+    <h2>Esquerda</h2>
+    <h3>Centro</h3>
+    <h4>Direita</h4>
+    <p>Há três tipos de alinhamento, à esquerda, à direita e centralizado. Antigamente para alinhar um texto, usava-se a tag center dentro do próprio HTML, porém com a atualização para o HTML5 e do CSS3, agora, para definir onde um texto irá se posicionar, é necessário utilizar CSS.</p>
+    <p>Por padrão, os textos inseridos no código são alinhados à esquerda.</p>
+    <p>Nos três títulos inseridos acima, eu usei a seguinte maneira para alinhá-los como eu quisesse.</p>
+    <pre>
+&lt;style&gt;
+    body{
+        background-color: rgb(209, 162, 253); //cor de fundo
+        font: normal 16px Arial, Verdana, serif; //shorthand de todas as fontes inseridas no body
+    }
+
+    h2{
+        text-align: left;
+    }
+
+    h3{
+        text-align: center;
+    }
+
+    h4{
+        text-align: right;
+    }
+
+    p{
+        text-align: justify;
+        text-indent: 30px;
+    }
+&lt;/style&gt;
+    </pre>
+    <p>Utilizei CSS interno para fazer declarações de text-align e coloquei o padrão desejado, left (esquerda), center (centro) e right (direita).</p>
+    <p>Para os parágrafos há um padrão normalmente usado que é o text-align: justify; . Esse padrão serve para que o texto tenha o mesmo alinhamento à direita e à esquerda.</p>
+    <p>Há também como inserir a declaração text-indent: <small>númerodepixelsdesejado</small>px, isso serve para haver um pequeno espaçamento no início do parágrafo, como se fosse uma redação.</p>
+    <a href="../index.html">Voltar à página inicial</a>
+</body>
+</html>

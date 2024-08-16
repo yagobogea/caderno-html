@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site estilizado com CSS</title>
+    <link rel="stylesheet" href="site.css">
+</head>
+<body>
+    <main>
+        <h1>Teste de site</h1>
+        <h2>Título</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos cum, suscipit odio molestias quod corporis explicabo consequuntur, illum nisi voluptate, in sapiente beatae. Consequuntur, atque voluptates nihil unde quibusdam qui!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos labore laboriosam facere similique, asperiores, iusto dolorem, repellendus aspernatur non soluta sit reprehenderit quasi voluptatem assumenda alias ullam aut culpa quas!</p>
+        <h2>Título</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore facilis reiciendis eos ex veniam voluptas! Incidunt, voluptatem atque dolor perspiciatis nostrum molestiae repellat fugiat itaque voluptatum labore iure veniam iste!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus impedit, eius pariatur optio aperiam molestiae quidem accusantium tempora quibusdam ut aliquid obcaecati consectetur ea deleniti sint. Quod incidunt quaerat unde.</p>
+    </main>
+
+    <pre>
+
+        <strong>Código usado nas CSS</strong>
+
+        @charset "UTF-8";
+
+*{
+    font-family: Arial, Helvetica, sans-serif;  //escolhe a fonte globalmente pois tem o *
+}
+
+body{
+    background-image: linear-gradient(to right, #9F84BD, #C09BD8);  //faz o degradê
+}
+
+main{
+    background-color: white; //define a cor de fundo
+    border-radius: 10px;  //arredonda as bordas
+    box-shadow: 10px 10px 15px #5e4e70c4;  //define o deslocamento de sombra lateral, para baixo e o espalhamento respectivamente
+    width: 600px;  //define a largura
+    padding: 10px;  //cria uma distância entre o texto e a borda              
+    margin: auto;  //alinha a main no centro
+}
+
+h1{
+    text-align: center;  //alinha o texto
+    color: #EBC3DB;  //escolhe a cor do texto
+    text-shadow: 1px 2px 3px #816b78;  //sombra com o mesmo princípio da de cima
+}
+
+h2{
+    color: #5c5b52;  //escolhe a cor do texto
+}
+
+p{
+    text-align: justify;  //mantém o texto alinhado em um padrão
+}
+    </pre>
+    <a href="../index.html">Voltar</a>
+</body>
+</html>

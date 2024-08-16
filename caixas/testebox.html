@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de caixas</title>
+</head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #242424;
+        margin: 0px;
+    }
+
+    header {
+        background-color: white;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    nav {
+        background-color: rgb(152, 255, 255);
+    }
+
+    nav > a {
+        text-decoration: none;
+        color: red;
+    }
+
+    nav > a:hover {
+        text-decoration: underline;
+    }
+
+    main {
+        background-color: white;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    section > article > h2 {
+        background-color: rgb(252, 233, 128);
+    }
+
+    article > aside {
+        background-color: rgb(99, 99, 99);
+    }
+
+    footer {
+        background-color: rgb(132, 132, 255);
+        text-align: center;
+        padding: 20px;
+        margin: 0px;
+    }
+
+    a {
+        color:red;
+    }
+</style>
+<body>
+    <header>
+        <h1>Teste de caixas com grouping tags</h1>
+        <nav>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <article>
+                <h2>Urgente!</h2>
+                <p>Pedro dá a bunda pra 2050 homens</p>
+                <aside>
+                    <p>Artigo escrito por Yago Bogéa</p>
+                </aside>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por Yago Bogéa</p>
+    </footer>
+    <br>
+    <a href="../index.html">Voltar</a>
+</body>
+</html>

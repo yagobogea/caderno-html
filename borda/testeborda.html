@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de borda em imagem</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        h1 {
+            border: 12px solid black;
+            padding: 10px;
+            border-image: url('../midia/bordas.png') 27 repeat;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de borda</h1>
+    <p>Para fazer essa borda faz-se as seguintes declarações em CSS:</p>
+    <pre>
+h1 {
+    border: 12px solid black; //faz a borda
+    padding: 10px; 
+    border-image-source: url('../midia/bordas.png'); //adiciona a imagem desejada à borda
+    border-image-slice: 27; //define como a borda será 
+    border-image-repeat: repeat; //indica que é para a borda se repetir
+}
+
+<strong><small>Shorthand</small></strong>
+
+border-image: url('../midia/bordas.png') 27 repeat;
+
+<strong>NECESSARIAMENTE NESSA ORDEM</strong>
+    </pre>
+    <a href="../index.html">Voltar</a>
+</body>
+</html>

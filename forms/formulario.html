@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        * {
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
+
+        div {
+            border: 2px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meu primeiro formulário</h1>
+    <p>Todo formulário deve estar entre &lt;form&gt; e &lt;/form&gt;, dentro dessas tags hão atributos importantíssimos, mas agora aprenderemos apenas o básico. Essa maneira de fazer formulários não é a melhor, mas é utilizavél e utilizaremos ela para aprender.</p>
+    <p>Fora estar dentro da tag "form", é necessário usar a tag &lt;input&gt; para dar um parâmetro ao form, de como ele irá aparecer na tela e como será utilizado.</p>
+    <div>
+        <form autocomplete="off" action="cadastro.php" method="post">
+            <p><label for="inome">Nome:</label>
+                <input type="text" name="nome" id="inome" placeholder="Insira seu nome"><p>
+            <p><label for="isobrenome">Sobrenome:</label>
+                <input type="text" name="sobrenome" id="isobrenome" placeholder="Insira seu sobrenome"></p>
+            <p>
+                <input type="submit" value="Enviar"></p>
+        </form>
+    </div>
+    <p>No nosso caso, utilizamos o input do type text para as caixas de inserção de nome, as caixinhas de texto foram inseridas automaticamente ao colocar o input. Todo input deve ter um nome e um id.</p>
+    <p>Também utilizei o input com o type submit para fazer esse botão. O botão foi criado automaticamente sem a necessidade de CSS para fazê-lo. Dentro desse input há a necessidade de insercão de valor "value", inserir esse valor fará com que o texto escrito dentro apareça no botão.</p>
+    <p>Se você clicar em um dos campos de texto, irá aparecer uma sugestão de autocomplete com nomes utilzados anteriormente em outros sites, se você deseja desativar isso, basta colocar dentro da tag &lt;form&gt; a declaraçao "autocomplete="off"".</p>
+    <h2>Para onde os dados serão enviados?</h2>
+    <p>Normalmente os dados serão enviados para alguma linguagem de programação, há muitas opções, mas aqui utilizarei php apenas como exemplo de um script.</p>
+    <p>Para fazer isso, basta colocar dentro da tag &lt;form&gt; a declaração "action="cadastro.php"" (.php no meu caso que estou usando a linguagem php como exemplo). Essa ação será disparada quando o botão de submit for clicado.</p>
+    <h2>Textos anteriores às caixas</h2>
+    <p>Antes das caixas de texto, geralmente há palavras, porém o navegador não entende que essa palavra está ligada ao input. Para fazer a ligação entre a palavra que está anexada anteriormente ao input, utiliza-se os "labels", as "etiquetas."</p>
+    <p>Para utilizar as labels, deve-se envolver a palavra ou texto desejado com a tag &lt;label&gt;, dentro dessa tag irá haver apenas um parâmetro, que é o "for". Dentro do for deve-se inserir o id, isso fará com que o label seja associado ao input, pois o "for" está com o nome do "id", o que significa que os dois estão relacionados.</p>
+    <p>A parte principal disso é criar uma relação entre o label e o input.</p>
+    <h2>Diferenças entre "name" e "id"</h2>
+    <p>As linguagens de programação precisam pegar o dado de algum lugar, o name e o id ajudam as linguagens a identificarem esse dado. Cada linguagem tem o seu "parâmetro de preferência", por exemplo, a linguagem php utiliza de maneira mais hábil objetos que tenham um name, já a linguagem javascript utiliza melhor o id. Então é necessário identificar todos os campos de entrada.</p>
+    <h2>Métodos de envio de formulários</h2>
+    <p>Quando os dados são enviado para as caixas, o padrão é ficarem expostos na url do site em uso no momento. Isso pode gerar problema de segurança caso seja uma senha ou outra informação privada. Para otimizar a segurança, é necessário utilizar linguagens de programaçao e ter conhecimentos de https. Porém com HTML5 há duas maneiras de prevenir isso, não da melhor forma mas ainda assim útil.</p>
+    <p>Esses métodos são:</p>
+    <ul>
+        <li>GET</li>
+        <li>POST</li>
+    </ul>
+    <p>Esses parâmetros devem ser inseridos dentro da tag &lt;form&gt; utilizando o parâmetro "method="GET"" ou "method="POST"".</p>
+    <p>O padrão é o GET, que fará com que os dados apareçam na URL como já vimos antes.</p>
+    <p>Caso o POST seja inserido, ele fará com que os dados não apareçam na URL do site.</p>
+    <p>Isso não significa que o site está seguro, os dados continuam visíveis, só não na URL, se o inspecionar for utilizado, dá para encontrar os dados facilmente.</p>
+    <h3>Quando utilizar GET e POST?</h3>
+    <p>O GET deve ser utilizado quando os dados não forem sensíveis.</p>
+    <p><small>GET faz com que a <strong>busca</strong> de um site seja compartilhável.</small></p>
+    <p><small>Dados enviados por GET só podem ter até 3 mil bytes (aproximadamente 3 mil letras)<strong></strong></small></p>
+    <p><small><strong>o Get não pode ser utilizado para enviar URLs com foto. Nesses casos é utilizado o post.</strong></small></p>
+    <hr>
+    <p>O POST deve ser utilizado quando for necessário que o usuário envie para o site dados sensíveism, o ideal é trabalhar com https. Caso você não queira que os dados apareçam na url. Quando os dados passarem de 3 mil bytes. Se for desejado fazer envio de arquivos.</p>
+</body>
+</html>
