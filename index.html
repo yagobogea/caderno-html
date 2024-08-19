@@ -33,6 +33,10 @@
         .ifr {
             text-align: center;
         }
+
+        .ab {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -898,5 +902,16 @@ tbody > tr:nth-child(2n) {
     <h2>Criando formulários com HTML5</h2>
     <p>Formulários são aquelas caixas de texto presentes em sites para informações sejam inseridas. Os formulários tem muitos usos e hoje veremos como criá-los e onde utilizá-los</p>
     <a href="forms/formulario.html">Veja</a>
+    <h2>Controles e atributos para formulários em HTML5</h2>
+    <p>Nesse tópico veremos como utilizar inputs melhores.</p>
+    <ul>
+        <li><abbr title="Esse input faz com que os dados inseridos na caixa de texto não sejam visíveis. (ficam como bolinhas)." class="ab">input:password</abbr></li>
+        <li><abbr title="Esse input cria um botão de envio." class="ab">input:submit</abbr></li>
+        <li><abbr title="Esse input cria um botão de limpar o textos escritos em caixas." class="ab">input:reset</abbr></li>
+    </ul>
+    <p>Alguns campos do HTML tem a obrigação de serem preeenchidos antes que os dados sejam enviados. Para fazer o input desejado ter essa obrigação, basta colocar o parâmetro "required" dentro da tag do input desejado. Isso fará que caso o campo não esteja preenchido antes de clicar o botão de submit, apareça um aviso dizendo que este campo tem preenchimento necessário. Caso um campo de texto tenha um número de caracteres mínimo para ser enviado, basta colocar o parâmetro "minlength" e o número de caracteres desejado no campo de escrita à frente do minlength. O mesmo serve para número máximo utilizando "maxlength".</p>
+    <p>Para mudar o tamanho de uma caixa de texto, basta colocar o parâmetro "size" dentro do input de caixa desejado e inserir o número desejado dentro da sua área de texto. Os números a serem inseridos são de acordo com os caracteres. Ex: size="10" fará aparecer uma caixa que cabe 10 caracteres. Isso não significa que as letras inseridas a mais não aparecerão, na verdade a caixa começa a ir para o lado junto com a escrita mostrando as letras novas e escondendo as antigas.</p>
+    <p>Há também o parâmetro "placeholder" que caso tenha um texto escrito dentro da sua área de texto, fará que apareça um texto "fantasma" dentro da caixa de texto.</p>
+    <p>Navegadores guardam nomes já escritos em caixas de texto e sugerem o nome já escrito anteriormente caso uma nova caixa de texto já clicada, mas como fazemos para o navegador entender que o que está sendo clicado é uma caixa de texto? Para fazer isso, é necessário "dizer" ao input para que cada caixa serve. Colocando o parâmetro "autocomplete" dentro do input, ao fazer isso, aparecerá uma série de sugestões, que dependerá do programador dizer para o input para que cada autocomplete serve. Ex: autocomplete="username" fará que o input entenda que a caixa clicada é uma caixa de nome e sugerirá nomes anteriormente utilizados. Isso tudo em um formulário com o autocomplete="on", claro.</p>
 </body>
 </html>
