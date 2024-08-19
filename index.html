@@ -930,5 +930,19 @@ tbody > tr:nth-child(2n) {
     <p>Há também o input:date que fará aparecer uma caixa com opções de dia mês e ano.</p>
     <p>Há também o input:time que fará aparecer uma caixa com opções de hora.</p>
     <a href="forms/form003.html">Veja</a>
+    <h2>Formulários com telefone e e-mail</h2>
+    <p>Há formulários para email e telefone. Eles são inseridos utilizando os inputs input:email e input:tel. Não são muito úteis pois tem poucas configurações e poucos parâmetros a serem seguidos, porém há como utilizá-los e inserir parâmetros dentro de seus inputs. Um desses parâmetros é uma expressão regular dentro do input de telefone, essa expressão é <strong>pattern="^[0-9]{5}-[0-9]{4}$". Toda expressão regular começa com ^ e termina com $, essa expressão posta dentro da área de texto de pattern quer dizer que o input lerá alguns digitos e quantos digitos serão, o input aceitará 5 digitos de 0 a 9 seguido de 4 digitos de 0 a 9 (um número de telefone no padrão brasileiro). Caso seja necessária a adição de ddd entre parênteres o regex fica assim: pattern="^\(\d{2}\)\d{4,5}-\d{4}$"</strong></p>
+    <p>Essa validação já contida no html5 é ruim, mais para frente será necessário refazer essa validação de dados com Javascript ou PHP.</p>
+    <h3>Extra</h3>
+    <p><strong>Tag fieldset.</strong><br><br>A tag fieldset cria um campo de agrupamento de inputs, e com a tag legend pode-se colocar uma espécie de título para o fieldset.</p>
+    <br>
+    <a href="forms/form004.html">Veja</a>
+    <h2>Checkbox e Radio button</h2>
+    <p>No HTML5 há os inputs de checkbox e radio button, esse inputs geram caixinhas pequenas para serem marcadas ou desmarcadas.</p>
+    <p>Com o checkbox aparece uma caixinha quadrada que pode ser marcada ou desmarcada.</p>
+    <p>Já com o radio aparece uma pequena bolinha. Essa bolinha ao ser marcada, não pode mais ser desmarcada, ou seja, caso o radio esteja sendo usado para marcar o sexo de uma pessoa, deve-se colocar os dois com o mesmo nome, pois isso fará com que caso um seja clicado, o outro seja automaticamente desmarcado. <small>dentro dos inputs de radio deve ser inserido um value.</small></p>
+    <br>
+    <a href="forms/form005.html">Veja</a>
+    <h2>Elementos color, ranege e file em HTML</h2>
 </body>
 </html>
