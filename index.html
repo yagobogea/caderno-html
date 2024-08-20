@@ -949,5 +949,13 @@ tbody > tr:nth-child(2n) {
     <br><br>A tag range cria uma slidebar para que o usuário escolha onde essa barra irá ficar, dentro desse input, é ncessário inserir os valores máximos e mínimos que o usuário poderá escolher, utilizando os parâmetros min e max, caso haja vontade da barra já vir em um certo local, basta utilizar um value com o valor desejado.<br><br>A tag file cria um botão que permite enviar arquivos. Para utilizar este input, o form deve estar como post, pois o get suporta apenas 3 mil bytes.</p>
     <br>
     <a href="forms/form006.html">Veja</a>
+    <h2>Select, datalist e textarea em HTML</h2>
+    <p>Esses termos também são formulários, mas não mais inseridos com a tag &lt;input&gt;.</p>
+    <p>A tag select cria um pequeno menu seletor que desce com opções para que o usuário escolha. Para inserir informações nesse menu, usa-se <strong>dentro</strong> da tag selet as tags option, dentro dessas tags insere-se o value e o nome de cada uma das opções. Também há como agrupar essas opções dentro do menu com a tag optgroup e inserindo um label dentro dessa tag com o nome do grupo de opções. O menu não fica em ordem alfabética, fica na ordem em que foi inserido no código. Para marcar qual opção já aparecerá automaticamente marcada basta inserir o parâmetro selected dentro da tag option da opção desejada.</p>
+    <p>Caso a opção de escolha do usuário não esteja dentro da lista do select, há como o usuário iserir com texto dentro de um input:text sua própria opção utilizando a tag datalist. Da seguinte forma:</p>
+    <img src="midia/datalist.png" alt="" style="width: 600px;">
+    <br>
+    <p>a tag &lt;textarea&gt; serve para criar uma caixa de texto que o usuário pode inserir uma mensagem. Seus padrões de tag são name, id e a quantidade de colunas (cols="") e a quantidade de linhas (rows=""). Quando uma tag textarea for utilizada o form deve estar com o método post, para não ocorrer problema de memória curta com os 3 mil bytes do get.</p>
+    <a href="forms/form007.html">Veja</a>
 </body>
 </html>
