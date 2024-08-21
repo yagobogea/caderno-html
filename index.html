@@ -957,5 +957,34 @@ tbody > tr:nth-child(2n) {
     <br>
     <p>a tag &lt;textarea&gt; serve para criar uma caixa de texto que o usuário pode inserir uma mensagem. Seus padrões de tag são name, id e a quantidade de colunas (cols="") e a quantidade de linhas (rows=""). Quando uma tag textarea for utilizada o form deve estar com o método post, para não ocorrer problema de memória curta com os 3 mil bytes do get.</p>
     <a href="forms/form007.html">Veja</a>
+    <h2>Utilizando output</h2>
+    <p>No HTML há a tag &lt;output&gt;, essa tag cria um campo onde pode ser escrito um dado que será enviado para o id posto dentro dessa tag. Para fazer o output funcionar, usa-se Javascript, nesse caso faremos uma soma de duas caixas utilizando Javascript. Com esse código em js o output mostrará uma soma entre os dois.</p>
+    <img src="midia/outp.png" alt="" style="width: 800px;">
+    <br> <br>
+    <p>No código escrito temos:</p>
+    <pre>
+&lt;label for="in1"&gt; que significa que é um label para o input com id in1
+
+Embaixo temos o input com id in1 que foi usado para gerar uma caixa de números que podem ir de 0 a 50.
+Dentro desse input temos o parâmetro oninput, que cria um campo de parâmetro onde pode ser escrito um script. 
+No script criado, o requerimento feito é uma soma entre os números postos dentro das caixas de números com os ids in1 e in2.
+
+O script foi feito com a ordem de enviar os dados para o "isoma", que foi o id posto no output.
+Logo, o resultado da soma será mostrado no campo de escrita do output, pois os dois tem o mesmo id, o que fará que a soma tenha o dado de resultado enviado para o campo de texto do output.  
+Como podemos ver, no código e no script, tem-se o id="in2", a mesma lógica se aplica a esse id.
+Criou-se uma caixa de texto com ele, inseriu-se o resultado dele no script, e foi feita a soma dentro do script com ordem de aparecer no output.
+    </pre>
+    <a href="forms/form008.html">Veja</a>
+    <p><strong>Outro exemplo</strong></p>
+    <p>Nesse exemplo, a intenção é usar um input:range e fazer que o número que o range estiver apareça. (nesse caso o range vai de 0 a 10).</p>
+    <a href="forms/form009.html">Veja</a>
+    <p><strong>Outro exemplo</strong></p>
+    <p>A proposta desse exemplo é criar um script que calcula a idade do usuário de acordo com seu ano de nascimento.</p>
+    <a href="forms/form010.html">Veja</a>
+    <br> <br> <br>
+    <img src="midia/scr.png" alt="">
+    <h2>Media Queries</h2>
+    <p>Media Queries são mídias que se adaptam de acordo com o tamanho de telas ou uso.</p>
+    <p>Há um tamanho da mídia para telas de celulares, monitores, televisões, há inúmeros tamanhos para agregar e adaptar em cada tamanho de tela. Também há media queries para impressão, um site é cheio de links, menus, anúncios e etc, um papel impresso não precisa disso, então, ao clicar no botão de impressão, o site gera um formato apenas para impressão. Media Queries são feitos por CSS.</p>
 </body>
 </html>
